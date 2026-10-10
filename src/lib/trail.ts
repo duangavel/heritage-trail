@@ -10,13 +10,19 @@ export interface Stop {
   lng: number | null;
   /** Marker is up but its story hasn't been written yet. */
   comingSoon?: boolean;
+  /** Editorial note, e.g. "pending committee confirmation". Not shown on the site. */
+  status?: string;
   teaser: string;
+  /** Paragraphs are separated by a blank line ("\n\n"). */
   story: string;
 }
 export type MappedStop = Stop & { lat: number; lng: number };
 
 /** Trail order is the order of src/data/stops.json. */
 export const STOPS: Stop[] = stopsData;
+
+/** The story split into paragraphs. */
+export const storyParagraphs = (s: Stop) => s.story.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
 
 export const isMapped = (s: Stop): s is MappedStop => s.lat != null && s.lng != null;
 

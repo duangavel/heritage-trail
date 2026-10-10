@@ -34,7 +34,7 @@ const dedications = timeline();
   <p class="passport" aria-live="polite" data-passport>Your trail passport fills in as you visit stops.</p>
 
   <h2 id="stops-h">The walk</h2>
-  <p class="section-intro">Stops run south to north, from the Missouri State campus up through the historic church square to Silver Springs Park.</p>
+  <p class="section-intro">Stops 1 to 11 run south to north, from the Missouri State campus up through the historic church square to Silver Springs Park and Lincoln Memorial Cemetery. Stop 12, the newest marker, is a few blocks east of Lincoln School (stop 9).</p>
   <ol class="stops" aria-labelledby="stops-h">
     {STOPS.map((s, i) => (
       <li class="stop" data-stop-id={s.id}>
@@ -107,7 +107,7 @@ const dedications = timeline();
           </div>
         );
       })}
-      <p class="sheet-story" id="sheetStory"></p>
+      <div class="sheet-story" id="sheetStory"></div>
       <PhotoTool id="camInput">
         <a class="btn btn-ghost" id="dirLink" target="_blank" rel="noopener">Get directions</a>
         <button class="btn btn-ghost" id="visitBtn" type="button">Mark as visited</button>

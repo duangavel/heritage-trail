@@ -1,4 +1,4 @@
-import { STOPS, directionsUrl, stopUrl } from "../lib/trail";
+import { STOPS, directionsUrl, stopUrl, storyParagraphs } from "../lib/trail";
 import { visited, stamp, renderPassport, initMapCaptions } from "./passport";
 import { initPhoto } from "./photo";
 
@@ -32,7 +32,11 @@ function openStop(id: string) {
   $("sheetStop").textContent = `Stop ${i + 1} of ${STOPS.length}. ${s.meta}`;
   $("sheetTitle").textContent = s.name;
   $("sheetWhere").textContent = s.where;
-  $("sheetStory").textContent = s.comingSoon ? "This marker's story is coming soon." : s.story;
+  $("sheetStory").replaceChildren(...(s.comingSoon ? ["This marker's story is coming soon."] : storyParagraphs(s)).map((text) => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    return p;
+  }));
   $("sheetStory").classList.toggle("coming-soon", !!s.comingSoon);
   document.querySelectorAll<HTMLElement>("[data-photos-for]").forEach((el) => { el.hidden = el.dataset.photosFor !== s.id; });
   const dir = directionsUrl(s), dirLink = $<HTMLAnchorElement>("dirLink");

@@ -14,7 +14,8 @@ All stop text lives in [`src/data/stops.json`](src/data/stops.json). Each stop h
 | `meta`   | Marker number / dedication line                                 |
 | `lat`, `lng` | Position, used for the map and "Get directions"             |
 | `teaser` | One sentence shown in the list (also the page's search description) |
-| `story`  | The full marker story                                           |
+| `story`  | The full marker story. Separate paragraphs with a blank line (`\n\n` in the JSON). |
+| `status` | Optional editorial note such as `"pending committee confirmation"`; not shown on the site. |
 
 Stops are numbered in the order they appear in the file. Adding or removing an entry updates the map, list, page count and stop pages automatically.
 

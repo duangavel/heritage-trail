@@ -241,3 +241,7 @@ a.chip{display:inline-flex; align-items:center; text-decoration:none}
 .roll-role{color:var(--muted); font-size:.98rem; line-height:1.5; padding-left:1.25rem; max-width:40em}
 .about-credit{font:600 1.1rem/1.5 var(--display); margin:0 0 .5rem}
 footer .credit a{font:inherit; font-family:var(--body); font-size:.9rem; font-weight:700; margin-left:.35rem; white-space:nowrap}
+
+/* multi-paragraph stories */
+.sheet-story p{margin:0 0 1em}
+.sheet-story p:last-child{margin-bottom:0}

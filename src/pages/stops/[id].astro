@@ -5,7 +5,7 @@ import SiteFooter from "../../components/SiteFooter.astro";
 import LeadPhoto from "../../components/LeadPhoto.astro";
 import Gallery from "../../components/Gallery.astro";
 import PhotoViewer from "../../components/PhotoViewer.astro";
-import { STOPS, TRAIL_NAME, stopUrl, directionsUrl, type Stop } from "../../lib/trail";
+import { STOPS, TRAIL_NAME, stopUrl, directionsUrl, storyParagraphs, type Stop } from "../../lib/trail";
 import { photosFor } from "../../lib/photos";
 
 export function getStaticPaths() {
@@ -30,7 +30,7 @@ const galleries = events.filter((e) => e.photos.length);
     {lead && <LeadPhoto photo={lead} eager />}
     {s.comingSoon
       ? <p class="sheet-story coming-soon">This marker's story is coming soon.</p>
-      : <p class="sheet-story">{s.story}</p>}
+      : <div class="sheet-story">{storyParagraphs(s).map((p) => <p>{p}</p>)}</div>}
 
     <PhotoTool id="camInput">
       {directions && <a class="btn btn-ghost" href={directions} target="_blank" rel="noopener">Get directions</a>}
