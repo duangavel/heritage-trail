@@ -1,0 +1,15 @@
+---
+/* Markup for the trail photo; behavior lives in src/scripts/photo.ts. */
+interface Props { id: string }
+const { id } = Astro.props;
+---
+<div class="sheet-actions" data-photo>
+  <label class="btn btn-primary" for={id}>Take my trail photo</label>
+  <input class="sr" type="file" accept="image/*" capture="user" id={id} data-photo-input />
+  <slot />
+  <div class="photo-panel" data-photo-panel>
+    <canvas width="1080" height="1350" role="img" aria-label="Your framed trail photo" data-photo-canvas></canvas>
+    <button class="btn btn-primary btn-block" type="button" data-photo-save>Save photo</button>
+    <p class="note" role="status" data-photo-note></p>
+  </div>
+</div>

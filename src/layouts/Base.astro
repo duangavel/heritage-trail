@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+import TrailMap from "../components/TrailMap.astro";
+import { TRAIL_NAME } from "../lib/trail";
+
+interface Props {
+  title: string;
+  description: string;
+  /** Highlights this stop's pin and captions the map with it. */
+  activeId?: string;
+  caption?: string;
+}
+const { title, description, activeId, caption = "" } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#12352B" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,800;1,400&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <slot name="head" />
+</head>
+<body>
+<div class="wrap">
+  <aside class="map-col" aria-label="Trail map">
+    <div class="map-head"><a class="trail-name" href="/">{TRAIL_NAME}</a></div>
+    <div class="map-frame"><TrailMap activeId={activeId} /></div>
+    <p class="map-caption" id="mapCaption" aria-hidden="true">{caption}</p>
+    <p class="map-legend">Tap a stop to read its story. Map is a guide, not to scale.</p>
+  </aside>
+  <main class="content">
+    <slot />
+  </main>
+</div>
+<slot name="after" />
+</body>
+</html>

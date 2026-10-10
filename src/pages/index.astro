@@ -1,0 +1,84 @@
+---
+import Base from "../layouts/Base.astro";
+import PhotoTool from "../components/PhotoTool.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import { STOPS, TRAIL_NAME, stopUrl, countWord, capitalize } from "../lib/trail";
+
+const ids = STOPS.map((s) => s.id);
+const count = capitalize(countWord(STOPS.length));
+---
+<Base title={TRAIL_NAME} description={`${count} markers across downtown and midtown Springfield, Missouri, tell the stories of the people and places that shaped Springfield and Greene County.`}>
+  {/* Old-style QR links (/?stop=kentwood) go to the stop's own page. */}
+  <script is:inline slot="head" define:vars={{ ids }}>
+    (function () {
+      var m = (location.search + location.hash).match(/stop=([a-z0-9-]+)/);
+      if (m && ids.indexOf(m[1]) >= 0) location.replace("/stops/" + m[1] + "/?scan");
+    })();
+  </script>
+
+  <h1>Springfield's Black history, marked where it happened.</h1>
+  <p class="lede">{count} markers across downtown and midtown tell the stories of the people and places that shaped Springfield and Greene County. Walk them in order, or start at whichever one is closest.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href={stopUrl(STOPS[0].id)} data-open={STOPS[0].id}>Start at stop 1</a>
+    <a class="btn btn-ghost" href="#photo-how">Take a trail photo</a>
+  </div>
+  <p class="passport" aria-live="polite" data-passport>Your trail passport fills in as you visit stops.</p>
+
+  <h2 id="stops-h">The walk</h2>
+  <p class="section-intro">Stops run south to north, from the Missouri State campus up through the historic church square to Silver Springs Park.</p>
+  <ol class="stops" aria-labelledby="stops-h">
+    {STOPS.map((s, i) => (
+      <li class="stop" data-stop-id={s.id}>
+        <span class="stop-num" aria-hidden="true">{i + 1}</span>
+        <a class="stop-btn" href={stopUrl(s.id)} data-open={s.id}>
+          <span class="stop-title">{s.name}<span data-visited-suffix={s.id}></span></span>
+          <span class="stop-meta">{s.where}</span>
+          <span class="stop-teaser">{s.teaser}</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+
+  <h2 id="photo-how">Your trail photo</h2>
+  <p class="section-intro">Open any stop and choose "Take my trail photo." Snap a selfie with the marker behind you and it comes back framed with the marker's name, ready to save or share.</p>
+
+  <h2>Scanning a marker</h2>
+  <div class="qr-demo">
+    <p>Each physical marker gets its own QR code. Scanning it opens this site straight to that stop, welcomes the visitor, and stamps their trail passport. Try what a visitor would see:</p>
+    <div class="qr-row">
+      {STOPS.slice(0, 4).map((s) => <a class="chip" href={`${stopUrl(s.id)}?scan`}>Scan: {s.name}</a>)}
+    </div>
+    <p class="qr-url">Each code links to the stop's own page, for example <code>/stops/{STOPS[1].id}</code>.</p>
+  </div>
+
+  <h2>Stories still to be marked</h2>
+  <p class="section-intro">The committee plans more markers. Among the places named for future recognition:</p>
+  <div class="coming">
+    <div><strong>Sherman Avenue Corridor</strong><span>The heart of Black residential and business life on the north side.</span></div>
+    <div><strong>Jones Alley Business District</strong><span>A downtown district of Black-owned businesses that no longer stands.</span></div>
+    <div><strong>Happy Hollow</strong><span>A Black neighborhood on the north side of Sherman Avenue.</span></div>
+  </div>
+
+  <SiteFooter />
+
+  <Fragment slot="after">
+    <div class="scrim" id="scrim"></div>
+    <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" aria-hidden="true">
+      <button class="sheet-close" id="closeBtn" type="button" aria-label="Close">×</button>
+      <p class="sheet-stop" id="sheetStop"></p>
+      <h3 id="sheetTitle"></h3>
+      <p class="sheet-where" id="sheetWhere"></p>
+      <p class="sheet-story" id="sheetStory"></p>
+      <PhotoTool id="camInput">
+        <a class="btn btn-ghost" id="dirLink" target="_blank" rel="noopener">Get directions</a>
+        <button class="btn btn-ghost" id="visitBtn" type="button">Mark as visited</button>
+        <a class="btn btn-ghost" id="nextBtn"></a>
+      </PhotoTool>
+      <div class="listen">Oral history: recorded interviews from The Journey Continues project will play here.</div>
+    </section>
+  </Fragment>
+</Base>
+
+<script>
+  import "../scripts/home.ts";
+</script>

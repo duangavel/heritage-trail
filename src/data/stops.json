@@ -1,0 +1,112 @@
+[
+  {
+    "id": "walls",
+    "name": "Mary Jean Price Walls",
+    "where": "Missouri State campus, south of the Plaster Student Union",
+    "meta": "Marker No. 8, dedicated 2024",
+    "lat": 37.1993,
+    "lng": -93.2810,
+    "teaser": "The first Black student to apply to Missouri State, turned away in 1950.",
+    "story": "In 1950, Mary Jean Price was the salutatorian of her class and fully qualified when she became the first Black student to apply to what is now Missouri State University. The college denied her admission because of her race. Sixty years later, in 2010, the university awarded her an honorary bachelor's degree, and in 2016 it named the Mary Jean Price Walls Multicultural Resource Center Annex in her honor. She died in 2020. Her marker faces the center that carries her name."
+  },
+  {
+    "id": "kentwood",
+    "name": "Kentwood Arms Hotel",
+    "where": "Kentwood Hall, 700 E. St. Louis St.",
+    "meta": "Marker No. 11, dedicated 2026",
+    "lat": 37.2082,
+    "lng": -93.2832,
+    "teaser": "A Route 66 grand hotel that integrated overnight, then reversed course.",
+    "story": "Opened in 1926 on Route 66, the Kentwood Arms was Springfield's grand hotel, hosting entertainers and presidents. It was also segregated. In 1960, with a national press corps about to arrive, local leaders and the hotel opened its doors to Black guests practically overnight, making it the first hotel in town to fully serve them. Two years later the owner re-segregated, saying integration was bad for business. The marker tells the whole story: progress, retreat, and the long road between. Missouri State bought the building in 1984; today it is Kentwood Hall."
+  },
+  {
+    "id": "square",
+    "name": "Park Central Square",
+    "where": "Downtown Springfield",
+    "meta": "Placed with the Equal Justice Initiative",
+    "lat": 37.2089,
+    "lng": -93.2923,
+    "teaser": "Where the 1906 Easter lynchings took place.",
+    "story": "On Easter weekend in April 1906, a white mob took three Black men, Horace Duncan, Fred Coker and Will Allen, from the county jail and lynched them on the public square. None was ever tried. In the months that followed, many Black families left Springfield for good, and a growing community shrank for generations. This marker, placed in partnership with the Equal Justice Initiative, asks everyone who crosses the square to remember what happened at the center of the city."
+  },
+  {
+    "id": "sawyers",
+    "name": "Milly Sawyers",
+    "where": "Boonville Ave. and Water St.",
+    "meta": "Marker No. 10, dedicated 2025",
+    "lat": 37.2116,
+    "lng": -93.2925,
+    "teaser": "An enslaved woman who sued for her freedom in the 1830s, and won.",
+    "story": "In the 1830s, Milly Sawyers, an enslaved woman who had previously lived as free, went to court and argued that the law entitled her to her freedom. She was among the first enslaved people in Missouri to sue for freedom, and she won her case in Greene County. Her court papers sat forgotten until Greene County archivist Connie Yen came across them in 2017. The marker stands near the place where Sawyers was assaulted."
+  },
+  {
+    "id": "alberta",
+    "name": "Alberta's Hotel",
+    "where": "North side, near Benton Ave. (location to confirm)",
+    "meta": "A Route 66 site",
+    "lat": 37.2140,
+    "lng": -93.2882,
+    "teaser": "A safe place to stay for Black travelers on the Mother Road.",
+    "story": "During segregation, Black travelers on Route 66 could not count on finding a room. Alberta's Hotel offered one, a safe place to stay in a city where most hotels turned them away. It is one of three markers on the trail tied to the Mother Road, alongside the Kentwood Arms and Graham's Rib Station."
+  },
+  {
+    "id": "churchsouth",
+    "name": "Church Square South",
+    "where": "Tampa St. and Washington Ave.",
+    "meta": "Marker No. 3",
+    "lat": 37.2133,
+    "lng": -93.2852,
+    "teaser": "Gibson Chapel Presbyterian and Pitts Chapel United Methodist, both founded in 1865.",
+    "story": "Two of Springfield's oldest Black congregations stand here. Gibson Chapel Presbyterian began in 1865 as the First Negro Cumberland Presbyterian Church, founded by Rev. Peter Lair (later Lear), a formerly enslaved man; its brick church went up in 1891. Pitts Chapel United Methodist also dates to 1865, rebuilt after an arsonist burned its log church on Jordan Creek. Land donated by Fleming McCullah gave it a new home that also housed the Freedmen's Bureau school and, later, the public school for Black children. The congregation built its present church in 1911."
+  },
+  {
+    "id": "churchnorth",
+    "name": "Church Square North",
+    "where": "Central St., behind Benton Avenue AME",
+    "meta": "Marker No. 9, dedicated 2025",
+    "lat": 37.2150,
+    "lng": -93.2866,
+    "teaser": "Completing the square of four historic Black churches.",
+    "story": "Four historic Black congregations stand within a few blocks of each other here: Washington Avenue Baptist, Benton Avenue AME, Gibson Chapel Presbyterian and Pitts Chapel United Methodist. This marker honors Washington Avenue Baptist Church and completes the church square, the spiritual and civic center of Black Springfield for more than 150 years."
+  },
+  {
+    "id": "grahams",
+    "name": "Graham's Rib Station",
+    "where": "Chestnut Expressway and Washington Ave.",
+    "meta": "A Route 66 site",
+    "lat": 37.2195,
+    "lng": -93.2852,
+    "teaser": "Barbecue and guest cabins for travelers on Route 66.",
+    "story": "Graham's Rib Station served barbecue and rented guest cabins along Chestnut Expressway, then part of Route 66. In an era when Black motorists had to plan every stop around where they would be welcome, it was a place they could count on for a meal and a bed."
+  },
+  {
+    "id": "lincoln",
+    "name": "Lincoln School",
+    "where": "OTC Lincoln Hall, N. Sherman Ave.",
+    "meta": "Springfield's Black high school until 1955",
+    "lat": 37.2178,
+    "lng": -93.2788,
+    "teaser": "Springfield's high school for Black students until desegregation.",
+    "story": "Until desegregation in 1955, this was Lincoln School, where Springfield's Black students went to high school. Its teachers anchored the neighborhood well beyond the classroom; one of them, Gerald Brooks, helped start the Park Day tradition at Silver Springs. The building lives on today as Ozarks Technical Community College's Lincoln Hall."
+  },
+  {
+    "id": "silver",
+    "name": "Silver Springs Park",
+    "where": "N. Washington Ave.",
+    "meta": "Marker No. 1, unveiled 2018",
+    "lat": 37.2262,
+    "lng": -93.2838,
+    "teaser": "The only public park open to Black residents during segregation.",
+    "story": "Established in 1918 on land that had belonged to school superintendent Jonathan Fairbanks, Silver Springs was the only public park in Springfield open to Black residents during segregation. In 1952, park supervisors Gerald Brooks, also a Lincoln School teacher, and Robert Wendell Duncan started a day of games and sports for young people here. It grew into the Park Day Reunion, which still brings families home every year. The trail's first marker was unveiled here in 2018, the park's centennial."
+  },
+  {
+    "id": "cemetery",
+    "name": "Lincoln Memorial Cemetery",
+    "where": "North Springfield",
+    "meta": "Funded in part by the Community Foundation of the Ozarks",
+    "lat": 37.2370,
+    "lng": -93.2735,
+    "teaser": "Resting place of generations of Black Springfield.",
+    "story": "Lincoln Memorial Cemetery is the resting place of generations of Springfield's Black community, the families who built its churches, schools and businesses. Its marker ends the walk where many of the trail's stories end, among the people who lived them."
+  }
+]
