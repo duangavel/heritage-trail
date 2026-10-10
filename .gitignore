@@ -26,5 +26,5 @@ Thumbs.db
 # original single-file prototype (kept locally, not published)
 heritage-trail.html
 
-# Lenny Horton's original photos (kept locally; picks are copied into src/assets/photos by npm run photos)
+# Dr. Leonard Horton's original photos (kept locally; picks are copied into src/assets/photos by npm run photos)
 images/
