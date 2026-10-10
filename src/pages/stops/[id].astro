@@ -2,7 +2,11 @@
 import Base from "../../layouts/Base.astro";
 import PhotoTool from "../../components/PhotoTool.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
+import LeadPhoto from "../../components/LeadPhoto.astro";
+import Gallery from "../../components/Gallery.astro";
+import PhotoViewer from "../../components/PhotoViewer.astro";
 import { STOPS, TRAIL_NAME, stopUrl, directionsUrl, type Stop } from "../../lib/trail";
+import { photosFor } from "../../lib/photos";
 
 export function getStaticPaths() {
   return STOPS.map((stop, index) => ({ params: { id: stop.id }, props: { stop, index } }));
@@ -12,6 +16,9 @@ interface Props { stop: Stop; index: number }
 const { stop: s, index: i } = Astro.props;
 const prev = STOPS[i - 1];
 const next = STOPS[i + 1];
+const directions = directionsUrl(s);
+const { lead, events } = photosFor(s.id);
+const galleries = events.filter((e) => e.photos.length);
 ---
 <Base title={`${s.name} · ${TRAIL_NAME}`} description={s.teaser} activeId={s.id} caption={`Stop ${i + 1}: ${s.name}`}>
   <article class="stop-page" data-stop={s.id} data-index={i}>
@@ -20,14 +27,19 @@ const next = STOPS[i + 1];
     <p class="sheet-stop">Stop {i + 1} of {STOPS.length}. {s.meta}</p>
     <h1>{s.name}</h1>
     <p class="sheet-where">{s.where}</p>
-    <p class="sheet-story">{s.story}</p>
+    {lead && <LeadPhoto photo={lead} eager />}
+    {s.comingSoon
+      ? <p class="sheet-story coming-soon">This marker's story is coming soon.</p>
+      : <p class="sheet-story">{s.story}</p>}
 
     <PhotoTool id="camInput">
-      <a class="btn btn-ghost" href={directionsUrl(s)} target="_blank" rel="noopener">Get directions</a>
+      {directions && <a class="btn btn-ghost" href={directions} target="_blank" rel="noopener">Get directions</a>}
       <button class="btn btn-ghost" id="visitBtn" type="button">Mark as visited</button>
       {next && <a class="btn btn-ghost" href={stopUrl(next.id)}>Next stop: {next.name}</a>}
     </PhotoTool>
     <p class="passport" aria-live="polite" data-passport>Your trail passport fills in as you visit stops.</p>
+
+    {galleries.map((e) => <Gallery event={e} />)}
 
     <div class="listen">Oral history: recorded interviews from The Journey Continues project will play here.</div>
 
@@ -38,6 +50,7 @@ const next = STOPS[i + 1];
   </article>
 
   <SiteFooter />
+  {galleries.length > 0 && <PhotoViewer slot="after" />}
 </Base>
 
 <script>

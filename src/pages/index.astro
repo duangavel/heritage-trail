@@ -2,10 +2,15 @@
 import Base from "../layouts/Base.astro";
 import PhotoTool from "../components/PhotoTool.astro";
 import SiteFooter from "../components/SiteFooter.astro";
-import { STOPS, TRAIL_NAME, stopUrl, countWord, capitalize } from "../lib/trail";
+import LeadPhoto from "../components/LeadPhoto.astro";
+import { Image } from "astro:assets";
+import { STOPS, TRAIL_NAME, stopUrl, countWord, capitalize, formatDate } from "../lib/trail";
+import { photosFor, timeline, imageFor, PHOTOGRAPHER } from "../lib/photos";
+import emblem from "../assets/logo/trail-emblem.png";
 
 const ids = STOPS.map((s) => s.id);
 const count = capitalize(countWord(STOPS.length));
+const dedications = timeline();
 ---
 <Base title={TRAIL_NAME} description={`${count} markers across downtown and midtown Springfield, Missouri, tell the stories of the people and places that shaped Springfield and Greene County.`}>
   {/* Old-style QR links (/?stop=kentwood) go to the stop's own page. */}
@@ -16,7 +21,11 @@ const count = capitalize(countWord(STOPS.length));
     })();
   </script>
 
-  <h1>Springfield's Black history, marked where it happened.</h1>
+  <div class="hero">
+    {/* The emblem source is only ~500px wide (cut from a photo); CSS keeps it at or below 220px so the 2x image stays sharp. */}
+    <Image src={emblem} alt="Springfield-Greene County African American Heritage Trail emblem." width={220} densities={[1, 2]} class="hero-emblem" loading="eager" />
+    <h1>Springfield's Black history, marked where it happened.</h1>
+  </div>
   <p class="lede">{count} markers across downtown and midtown tell the stories of the people and places that shaped Springfield and Greene County. Walk them in order, or start at whichever one is closest.</p>
   <div class="actions">
     <a class="btn btn-primary" href={stopUrl(STOPS[0].id)} data-open={STOPS[0].id}>Start at stop 1</a>
@@ -37,6 +46,26 @@ const count = capitalize(countWord(STOPS.length));
         </a>
       </li>
     ))}
+  </ol>
+
+  <h2 id="dedications-h">Dedications</h2>
+  <p class="section-intro">Each marker is unveiled in a community ceremony. <span class="photo-credit">Photos by {PHOTOGRAPHER}</span></p>
+  <ol class="timeline" aria-labelledby="dedications-h">
+    {dedications.map(({ stop, index, event }) => {
+      const cover = event.photos[0] ?? photosFor(stop.id).lead;
+      return (
+        <li>
+          <a href={`${stopUrl(stop.id)}#${event.id}-h`}>
+            {cover && <Image src={imageFor(cover)} alt="" widths={[160, 320]} sizes="7rem" class="timeline-thumb" />}
+            <span class="timeline-text">
+              <time datetime={event.date}>{formatDate(event.date)}</time>
+              <strong>{stop.name}</strong>
+              <span>Stop {index + 1} · {event.photos.length} photos</span>
+            </span>
+          </a>
+        </li>
+      );
+    })}
   </ol>
 
   <h2 id="photo-how">Your trail photo</h2>
@@ -68,6 +97,16 @@ const count = capitalize(countWord(STOPS.length));
       <p class="sheet-stop" id="sheetStop"></p>
       <h3 id="sheetTitle"></h3>
       <p class="sheet-where" id="sheetWhere"></p>
+      {STOPS.map((s) => {
+        const { lead, events } = photosFor(s.id);
+        const gallery = events.find((e) => e.photos.length);
+        return (lead || gallery) && (
+          <div data-photos-for={s.id} hidden>
+            {lead && <LeadPhoto photo={lead} />}
+            {gallery && <p class="sheet-gallery-link"><a href={`${stopUrl(s.id)}#${gallery.id}-h`}>See {gallery.title.toLowerCase()} photos →</a></p>}
+          </div>
+        );
+      })}
       <p class="sheet-story" id="sheetStory"></p>
       <PhotoTool id="camInput">
         <a class="btn btn-ghost" id="dirLink" target="_blank" rel="noopener">Get directions</a>

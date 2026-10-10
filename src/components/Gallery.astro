@@ -1,0 +1,34 @@
+---
+/* A grid of event photos. Each thumbnail links to a large version, which src/scripts/viewer.ts opens in place. */
+import { Image, getImage } from "astro:assets";
+import { imageFor, PHOTOGRAPHER, type PhotoEvent } from "../lib/photos";
+import { formatDate } from "../lib/trail";
+
+interface Props { event: PhotoEvent }
+const { event } = Astro.props;
+
+const photos = await Promise.all(
+  event.photos.map(async (p) => {
+    const src = imageFor(p);
+    const large = await getImage({ src, width: Math.min(1600, src.width), format: "webp" });
+    return { p, src, large };
+  })
+);
+const headingId = `${event.id}-h`;
+---
+<section class="gallery" aria-labelledby={headingId}>
+  <h2 id={headingId}>{event.title}</h2>
+  <p class="gallery-meta">
+    {event.date && <time datetime={event.date}>{formatDate(event.date)}</time>}
+    {event.date && " · "}Photos by {PHOTOGRAPHER}
+  </p>
+  <ul class="gallery-grid" data-gallery>
+    {photos.map(({ p, src, large }) => (
+      <li>
+        <a href={large.src} data-full-w={large.attributes.width} data-full-h={large.attributes.height} data-caption={p.caption} data-alt={p.alt}>
+          <Image src={src} alt={p.alt} widths={[240, 360, 480, 720]} sizes="(min-width: 960px) 14rem, (min-width: 600px) 30vw, 45vw" />
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

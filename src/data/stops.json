@@ -108,5 +108,16 @@
     "lng": -93.2735,
     "teaser": "Resting place of generations of Black Springfield.",
     "story": "Lincoln Memorial Cemetery is the resting place of generations of Springfield's Black community, the families who built its churches, schools and businesses. Its marker ends the walk where many of the trail's stories end, among the people who lived them."
+  },
+  {
+    "id": "bartley",
+    "name": "Bartley-Decatur",
+    "where": "Location coming soon",
+    "meta": "Dedicated September 9, 2026",
+    "lat": null,
+    "lng": null,
+    "comingSoon": true,
+    "teaser": "Story coming soon.",
+    "story": ""
   }
 ]

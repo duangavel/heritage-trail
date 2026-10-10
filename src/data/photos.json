@@ -1,0 +1,504 @@
+{
+  "photographer": "Lenny Horton",
+  "stops": {
+    "walls": {
+      "lead": {
+        "file": "walls/lead.jpg",
+        "source": "Mary Jean Price Walls/Members of the Walls family take a photo at the historic marker..jpg",
+        "alt": "Eight members of the Walls family stand together beside the Mary Jean Price Walls marker in a garden on the Missouri State campus.",
+        "caption": "Members of the Walls family at the marker on dedication day."
+      },
+      "events": [
+        {
+          "id": "walls-dedication",
+          "title": "Dedication day",
+          "date": null,
+          "timeline": false,
+          "photos": [
+            {
+              "file": "walls/dedication-01.jpg",
+              "source": "Mary Jean Price Walls/Former MSU President Clif Smart (top) and former MSU Chief Diversity Officer Wes Pratt unveil the historic marker.jpg",
+              "alt": "Two men pull a white cover, tied with a blue ribbon, off the marker as it is unveiled.",
+              "caption": "Former Missouri State president Clif Smart and former chief diversity officer Wes Pratt unveil the marker."
+            },
+            {
+              "file": "walls/dedication-02.jpg",
+              "source": "Mary Jean Price Walls/Former MSU President Clif Smart (top) and former MSU Chief Diversity Officer Wes Pratt in front of the historic marker..jpg",
+              "alt": "A man in a blue shirt bends forward laughing and clapping beside the newly unveiled marker while a man in a blazer applauds behind him.",
+              "caption": "Clif Smart and Wes Pratt in front of the marker."
+            },
+            {
+              "file": "walls/dedication-03.jpg",
+              "source": "Mary Jean Price Walls/Architect John Oke-Thomas (left) with Terry Walls son of Mary Jean (Price) Walls.jpg",
+              "alt": "Two men smile with their arms around each other on a campus sidewalk, a crowd of students behind them.",
+              "caption": "Architect John Oke-Thomas (left) with Terry Walls, son of Mary Jean Price Walls."
+            },
+            {
+              "file": "walls/dedication-04.jpg",
+              "source": "Mary Jean Price Walls/Dr. Lyle Foster - researcher and African American Heritage Trail co-organizer.jpg",
+              "alt": "A man in a dark shirt gives two thumbs up beside the marker, flowering shrubs behind him.",
+              "caption": "Dr. Lyle Foster, researcher and African American Heritage Trail co-organizer."
+            },
+            {
+              "file": "walls/dedication-05.jpg",
+              "source": "Mary Jean Price Walls/Charlotte Hardin (bottom) MSU Faculty Emerita, with members of the Walls family.jpg",
+              "alt": "Guests stand together watching the ceremony as a videographer films from a tripod behind them.",
+              "caption": "Charlotte Hardin, Missouri State faculty emerita, with members of the Walls family."
+            },
+            {
+              "file": "walls/dedication-06.jpg",
+              "source": "Mary Jean Price Walls/(L to R) Springfield City Councilwoman Monica Horton and Senior Pastor Tracey Wolff - Historic Pitts Chapel UMC.jpg",
+              "alt": "Two women embrace and smile on a shaded campus walkway while other guests look on.",
+              "caption": "Springfield City Councilwoman Monica Horton (left) and Senior Pastor Tracey Wolff of Historic Pitts Chapel UMC."
+            },
+            {
+              "file": "walls/dedication-07.jpg",
+              "source": "Mary Jean Price Walls/Dr. Rabekah Stewart (Right) MSU Assistant VP for Student Affairs stands with MSU student.jpg",
+              "alt": "A crowd gathers outside a campus building; two women in front hold up phones to take pictures.",
+              "caption": "Dr. Rabekah Stewart (right), Missouri State assistant vice president for student affairs, with a student."
+            },
+            {
+              "file": "walls/dedication-08.jpg",
+              "source": "Mary Jean Price Walls/15.jpg",
+              "alt": "Guests crowd around the newly unveiled marker, several holding up phones, while a news camera records.",
+              "caption": "Guests photograph the marker after the unveiling."
+            }
+          ]
+        }
+      ]
+    },
+    "kentwood": {
+      "lead": {
+        "file": "kentwood/lead.jpg",
+        "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-43.jpg",
+        "alt": "The Kentwood Arms Hotel marker stands on a grassy lawn, with the tall brick Kentwood Hall building across the lawn under a clear blue sky.",
+        "caption": "The marker faces Kentwood Hall, once the Kentwood Arms Hotel."
+      },
+      "events": [
+        {
+          "id": "kentwood-dedication",
+          "title": "Dedication day",
+          "date": "2026-02-26",
+          "timeline": true,
+          "photos": [
+            {
+              "file": "kentwood/dedication-01.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-27.jpg",
+              "alt": "A small group laughs as they pull a dark velvet cover from the marker on a sunny winter afternoon.",
+              "caption": "Unveiling the Kentwood Arms marker."
+            },
+            {
+              "file": "kentwood/dedication-02.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-32.jpg",
+              "alt": "A crowd lines the sidewalk near the marker, with Missouri State's arena behind them; a man in the foreground photographs the marker with his phone.",
+              "caption": "Guests gather at the marker after the unveiling."
+            },
+            {
+              "file": "kentwood/dedication-03.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-36.jpg",
+              "alt": "A woman in a red jacket and a man in a maroon Missouri State sweatshirt pose arm in arm beside the marker, a Kentwood Hall sign behind them.",
+              "caption": "Posing with the new marker."
+            },
+            {
+              "file": "kentwood/dedication-04.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-28.jpg",
+              "alt": "The back of the marker, which continues the Kentwood Arms story, against bare winter branches, with two smiling guests at its base.",
+              "caption": "The marker's reverse side continues the story."
+            },
+            {
+              "file": "kentwood/dedication-05.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-03.jpg",
+              "alt": "A man in a maroon Missouri State sweatshirt speaks from a Missouri State University lectern in front of a large landscape painting.",
+              "caption": "Remarks before the unveiling."
+            },
+            {
+              "file": "kentwood/dedication-06.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-09.jpg",
+              "alt": "A packed room of guests seated in rows of chairs listens to the program inside Kentwood Hall.",
+              "caption": "The program inside Kentwood Hall."
+            },
+            {
+              "file": "kentwood/dedication-07.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-41.jpg",
+              "alt": "Three guests smile for the camera on the lawn, with the brick Kentwood Hall building behind them.",
+              "caption": "Guests in front of Kentwood Hall."
+            },
+            {
+              "file": "kentwood/dedication-08.jpg",
+              "source": "Kentwood Hall Marker Unveiling - 2-26-26/Heritage Trail - Kentwood-46.jpg",
+              "alt": "The entrance canopy of Kentwood Hall, with its name in gold letters above the street number 700.",
+              "caption": "Kentwood Hall, 700 E. St. Louis St."
+            }
+          ]
+        }
+      ]
+    },
+    "sawyers": {
+      "lead": {
+        "file": "sawyers/lead.jpg",
+        "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Sawyers-02.jpg",
+        "alt": "The Milly Sawyers marker, seen from below against a cloudy sky, with downtown Springfield's brick buildings and a street lamp behind it.",
+        "caption": "The Milly Sawyers marker downtown, near Boonville Avenue and Water Street."
+      },
+      "events": [
+        {
+          "id": "sawyers-dedication",
+          "title": "Dedication day",
+          "date": "2025-08-27",
+          "timeline": true,
+          "photos": [
+            {
+              "file": "sawyers/dedication-01.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Sawyers-19.jpg",
+              "alt": "Guests pull a gold cord to lift a black velvet cover off the marker, beside a chain-link fence and brick warehouses.",
+              "caption": "The unveiling."
+            },
+            {
+              "file": "sawyers/dedication-02.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Sawyers-15.jpg",
+              "alt": "A row of guests stands on the sidewalk looking up at the newly unveiled marker, its post set in a small bed of shrubs.",
+              "caption": "Guests take in the marker for the first time."
+            },
+            {
+              "file": "sawyers/dedication-03.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Sawyers-12.jpg",
+              "alt": "Two women clasp their hands and smile as they look up at the marker.",
+              "caption": "A moment of celebration at the marker."
+            },
+            {
+              "file": "sawyers/dedication-04.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Sawyers-23.jpg",
+              "alt": "A large crowd stands on a downtown sidewalk with heads bowed, many holding printed programs.",
+              "caption": "Guests pause during the dedication."
+            },
+            {
+              "file": "sawyers/dedication-05.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Adora Snead (right) played Milly Sawyers during a performance of The Milly Project.jpg",
+              "alt": "A smiling young woman in glasses claps in a doorway as other guests gather around her.",
+              "caption": "Adora Snead (right), who played Milly Sawyers in a performance of The Milly Project."
+            },
+            {
+              "file": "sawyers/dedication-06.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Archivist Connie Yen.jpg",
+              "alt": "A woman with long gray hair stands and speaks to a seated group around a table.",
+              "caption": "Greene County archivist Connie Yen, who found Milly Sawyers' court papers in 2017."
+            },
+            {
+              "file": "sawyers/dedication-07.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Dr. Lyle Foster (2).jpg",
+              "alt": "A man in a navy cap and sweater gestures as he speaks in a room lined with period costumes.",
+              "caption": "Dr. Lyle Foster."
+            },
+            {
+              "file": "sawyers/dedication-08.jpg",
+              "source": "Milly Sawyer Marker Photos Complete - 8-27-25/Milly Project founder Kendra Chappell.jpg",
+              "alt": "A woman with blond hair, holding a phone, speaks beside a rack of costumes and a \"Votes for Women\" sash.",
+              "caption": "Kendra Chappell, founder of The Milly Project."
+            }
+          ]
+        }
+      ]
+    },
+    "churchnorth": {
+      "lead": {
+        "file": "churchnorth/lead.jpg",
+        "source": "Church Square North - 2-24-25/IMG_7525.jpg",
+        "alt": "The Church Square North marker on its post beside a sidewalk, a smiling woman holding the post while guests gather nearby on a bright winter day.",
+        "caption": "The Church Square North marker on dedication day."
+      },
+      "events": [
+        {
+          "id": "churchnorth-dedication",
+          "title": "Dedication day",
+          "date": "2025-02-24",
+          "timeline": true,
+          "photos": [
+            {
+              "file": "churchnorth/dedication-01.jpg",
+              "source": "Church Square North - 2-24-25/IMG_7502.jpg",
+              "alt": "An older woman reaches up to pull the gold cord on the marker's black velvet cover as others look on.",
+              "caption": "The unveiling."
+            },
+            {
+              "file": "churchnorth/dedication-02.jpg",
+              "source": "Church Square North - 2-24-25/IMG_7553.jpg",
+              "alt": "About a dozen guests smile for a group photo in front of the new marker, a brick building behind them.",
+              "caption": "Guests gather at the new marker."
+            },
+            {
+              "file": "churchnorth/dedication-03.jpg",
+              "source": "Church Square North - 2-24-25/IMG_7437.jpg",
+              "alt": "A full sanctuary of guests in wooden pews faces a speaker at the pulpit, light coming through stained-glass windows.",
+              "caption": "The program inside Washington Avenue Baptist Church."
+            },
+            {
+              "file": "churchnorth/dedication-04.jpg",
+              "source": "Church Square North - 2-24-25/IMG_7407.jpg",
+              "alt": "A man in a white shirt speaks at a wooden pulpit.",
+              "caption": "Remarks during the program."
+            },
+            {
+              "file": "churchnorth/dedication-05.jpg",
+              "source": "Church Square North - 2-24-25/IMG_7420.jpg",
+              "alt": "Guests in the pews smile and applaud in front of stained-glass windows.",
+              "caption": "Applause in the sanctuary."
+            },
+            {
+              "file": "churchnorth/dedication-06.jpg",
+              "source": "Church Square North - 2-24-25/IMG_7602.jpg",
+              "alt": "Washington Avenue Baptist Church, a brick church with a bell tower and a green \"Historic Washington Ave. Baptist Church\" sign.",
+              "caption": "Washington Avenue Baptist Church, honored by this marker."
+            },
+            {
+              "file": "churchnorth/dedication-07.jpg",
+              "source": "Church Square North - 2-24-25/IMG_7609.jpg",
+              "alt": "The three-story brick Benton Avenue AME Church, behind a construction fence with scaffolding at its entrance.",
+              "caption": "Benton Avenue AME Church under restoration in 2025."
+            }
+          ]
+        },
+        {
+          "id": "churchnorth-benton-reopening",
+          "title": "Benton Avenue AME reopening",
+          "date": "2026-09-25",
+          "timeline": false,
+          "photos": [
+            {
+              "file": "churchnorth/benton-01.jpg",
+              "source": "Benton Avenue AME Reopening/Benton Avenue AME-30.jpg",
+              "alt": "A large crowd poses in front of the restored brick Benton Avenue AME Church on a sunny day.",
+              "caption": "The crowd outside the restored church."
+            },
+            {
+              "file": "churchnorth/benton-02.jpg",
+              "source": "Benton Avenue AME Reopening/Benton Avenue AME-24.jpg",
+              "alt": "A group stands on the sanctuary platform holding a long red ribbon for the ribbon cutting.",
+              "caption": "The ribbon cutting."
+            },
+            {
+              "file": "churchnorth/benton-03.jpg",
+              "source": "Benton Avenue AME Reopening/Benton Avenue AME-07.jpg",
+              "alt": "Guests fill the wooden pews of the restored sanctuary, with arched windows and screens showing historic photographs.",
+              "caption": "The program in the restored sanctuary."
+            },
+            {
+              "file": "churchnorth/benton-04.jpg",
+              "source": "Benton Avenue AME Reopening/Benton Avenue AME-43.jpg",
+              "alt": "The restored sanctuary seen from the balcony, with tall arched windows and rows of wooden pews.",
+              "caption": "The restored sanctuary."
+            },
+            {
+              "file": "churchnorth/benton-05.jpg",
+              "source": "Benton Avenue AME Reopening/Benton Avenue AME-49.jpg",
+              "alt": "An antique L C Smith typewriter on a wooden desk beside a framed black-and-white family photograph.",
+              "caption": "A historic typewriter on display in the church."
+            },
+            {
+              "file": "churchnorth/benton-06.jpg",
+              "source": "Benton Avenue AME Reopening/Benton Avenue AME-57.jpg",
+              "alt": "The restored church's brick facade and entrance under a blue sky, with a stone church steeple in the background.",
+              "caption": "Benton Avenue AME Church after restoration."
+            }
+          ]
+        }
+      ]
+    },
+    "grahams": {
+      "lead": {
+        "file": "grahams/lead.jpg",
+        "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-46.jpg",
+        "alt": "Elaine Estes Graham, in a floral jacket and long pearl necklace, stands beside Councilwoman Monica Horton, in a red blazer, in front of the Graham's Rib Station marker.",
+        "caption": "Elaine Estes Graham and Councilwoman Monica Horton at the Graham's Rib Station marker."
+      },
+      "events": [
+        {
+          "id": "grahams-visit",
+          "title": "Visiting with Elaine Estes Graham",
+          "date": "2026-04-24",
+          "timeline": false,
+          "photos": [
+            {
+              "file": "grahams/visit-01.jpg",
+              "source": "Grahams Rib Station/618838593_10235980089136866_3728529568706301361_n.jpg",
+              "alt": "A printed photograph of a smiling man and two women, captioned \"Pictured are John Estes, Zelma Graham and Elaine Graham Estes.\"",
+              "caption": "John Estes, Zelma Graham and Elaine Graham Estes."
+            },
+            {
+              "file": "grahams/visit-02.jpg",
+              "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-1.jpg",
+              "alt": "Two women stand in a restaurant; one holds up a small red and gold Graham's Bar-B-Q sign.",
+              "caption": "Elaine Estes Graham holds a Graham's Bar-B-Q sign."
+            },
+            {
+              "file": "grahams/visit-03.jpg",
+              "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-20.jpg",
+              "alt": "A framed vintage matchbook reading \"Graham's Rib Station, Barbecue Eats, Washington at E. Chestnut, Springfield, Missouri.\"",
+              "caption": "A Graham's Rib Station matchbook."
+            },
+            {
+              "file": "grahams/visit-04.jpg",
+              "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-21.jpg",
+              "alt": "A framed vintage matchbook advertising \"Tourist Cabins, All Modern Conveniences,\" with a drawing of the cabins.",
+              "caption": "The other side of the matchbook advertises the tourist cabins."
+            },
+            {
+              "file": "grahams/visit-05.jpg",
+              "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-22.jpg",
+              "alt": "A framed old Christmas card with a photograph of a woman standing in front of the Graham's Rib Station building.",
+              "caption": "A Christmas card showing Graham's Rib Station."
+            },
+            {
+              "file": "grahams/visit-06.jpg",
+              "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-5.jpg",
+              "alt": "Elaine Estes Graham smiles as she talks, seated in a restaurant booth.",
+              "caption": "Elaine Estes Graham shares her memories."
+            },
+            {
+              "file": "grahams/visit-07.jpg",
+              "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-31.jpg",
+              "alt": "Elaine Estes Graham points into the distance outside a building.",
+              "caption": "Elaine Estes Graham during the visit."
+            },
+            {
+              "file": "grahams/visit-08.jpg",
+              "source": "Grahams Rib Station/Monica Horton and Elaine Estes Graham-48.jpg",
+              "alt": "Elaine Estes Graham smiles and gestures toward the Graham's Rib Station marker beside a low brick building.",
+              "caption": "Elaine Estes Graham at the marker."
+            }
+          ]
+        }
+      ]
+    },
+    "lincoln": {
+      "lead": {
+        "file": "lincoln/lead.jpg",
+        "source": "Lincoln School/pic 8 Lincoln School-Lincoln Hall.JPG",
+        "alt": "The long two-story red brick Lincoln School building, now OTC Lincoln Hall, behind a wide green lawn under a blue sky.",
+        "caption": "Lincoln Hall, formerly Lincoln School."
+      },
+      "note": "This photo shows the building, not the marker. Replace it when a marker photo is available.",
+      "events": []
+    },
+    "silver": {
+      "lead": {
+        "file": "silver/lead.jpg",
+        "source": "Silver Springs Park/Silver Springs Park.jpg",
+        "alt": "A wooden sign reading \"Silver Springs Park, Springfield-Greene Co. Park Board\" on a grassy lawn, with a small stone building and parked cars behind it.",
+        "caption": "The entrance sign at Silver Springs Park."
+      },
+      "note": "This photo shows the park sign, not the marker. Replace it when a marker photo is available.",
+      "events": [
+        {
+          "id": "silver-groundbreaking",
+          "title": "Pavilion renovation groundbreaking",
+          "date": "2024-10-28",
+          "timeline": false,
+          "photos": [
+            {
+              "file": "silver/groundbreaking-01.jpg",
+              "source": "Silver Springs Park/IMG_4924.jpg",
+              "alt": "A line of about fifteen people in white hard hats turn shovels of dirt in front of the park's stone pavilion.",
+              "caption": "Breaking ground on the pavilion renovation."
+            },
+            {
+              "file": "silver/groundbreaking-02.jpg",
+              "source": "Silver Springs Park/IMG_4905.jpg",
+              "alt": "Rows of guests in folding chairs on the grass under autumn trees, listening to the program.",
+              "caption": "Guests at the groundbreaking."
+            },
+            {
+              "file": "silver/groundbreaking-03.jpg",
+              "source": "Silver Springs Park/IMG_4812.jpg",
+              "alt": "A man in a blazer speaks at a microphone in front of a rendering of the renovated pavilion.",
+              "caption": "Remarks in front of the pavilion design."
+            },
+            {
+              "file": "silver/groundbreaking-04.jpg",
+              "source": "Silver Springs Park/IMG_4837.jpg",
+              "alt": "A woman in sunglasses speaks into a microphone in front of a \"Silver Springs Neighborhood Coalition Group\" sign.",
+              "caption": "A speaker from the Silver Springs Neighborhood Coalition Group."
+            },
+            {
+              "file": "silver/groundbreaking-05.jpg",
+              "source": "Silver Springs Park/IMG_4876.jpg",
+              "alt": "Seated guests applaud during the program, a playground behind them.",
+              "caption": "Applause during the program."
+            },
+            {
+              "file": "silver/groundbreaking-06.jpg",
+              "source": "Silver Springs Park/IMG_4866.jpg",
+              "alt": "Two older guests sit on a park bench near the pool while a younger man stands beside them.",
+              "caption": "Guests near the Silver Springs pool."
+            }
+          ]
+        }
+      ]
+    },
+    "bartley": {
+      "lead": {
+        "file": "bartley/lead.jpg",
+        "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-61.jpg",
+        "alt": "The Bartley-Decatur Neighborhood Center marker in the foreground, with a two-story red brick house with white columns and porches behind it.",
+        "caption": "The new marker in front of the Bartley-Decatur Neighborhood Center."
+      },
+      "events": [
+        {
+          "id": "bartley-dedication",
+          "title": "Dedication day",
+          "date": "2026-09-09",
+          "timeline": true,
+          "photos": [
+            {
+              "file": "bartley/dedication-01.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley and Decatur.jpg",
+              "alt": "Two vintage portrait photographs in round frames on a maroon background, labeled \"Mrs. Roberta Bartley\" and \"Mrs. Olive Decatur.\"",
+              "caption": "Mrs. Roberta Bartley and Mrs. Olive Decatur."
+            },
+            {
+              "file": "bartley/dedication-02.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-08.jpg",
+              "alt": "Guests seated in white folding chairs listen to a speaker inside the neighborhood center.",
+              "caption": "The program inside the neighborhood center."
+            },
+            {
+              "file": "bartley/dedication-03.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-13.jpg",
+              "alt": "A woman in a pink blouse speaks to the audience, holding a printed program.",
+              "caption": "Remarks during the program."
+            },
+            {
+              "file": "bartley/dedication-04.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-38.jpg",
+              "alt": "Guests untie gold cords to lift a black velvet cover from the marker on a sunny afternoon.",
+              "caption": "The unveiling."
+            },
+            {
+              "file": "bartley/dedication-05.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-40.jpg",
+              "alt": "Guests applaud as the black cover comes off the marker.",
+              "caption": "The marker is revealed."
+            },
+            {
+              "file": "bartley/dedication-06.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-56.jpg",
+              "alt": "Three people smile in front of the marker; the man in the middle wears a Bartley-Decatur Neighborhood Center T-shirt.",
+              "caption": "Celebrating at the new marker."
+            },
+            {
+              "file": "bartley/dedication-07.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-59.jpg",
+              "alt": "A smiling man in a cap and blue shirt stands beside the marker as two men read it behind him.",
+              "caption": "Reading the new marker."
+            },
+            {
+              "file": "bartley/dedication-08.jpg",
+              "source": "Bartley Decatur Marker Unveiling - 9-9-26/Bartley Decatur-62.jpg",
+              "alt": "The Bartley-Decatur Neighborhood Center sign, \"Building Dreams, Nurturing Community,\" in front of the brick house.",
+              "caption": "The Bartley-Decatur Neighborhood Center."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

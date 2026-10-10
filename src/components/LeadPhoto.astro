@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import { imageFor, PHOTOGRAPHER, type PhotoEntry } from "../lib/photos";
+
+interface Props {
+  photo: PhotoEntry;
+  /** Load right away (top of a stop page) or only when scrolled near (story sheet). */
+  eager?: boolean;
+}
+const { photo, eager = false } = Astro.props;
+---
+<figure class="lead-photo">
+  <Image
+    src={imageFor(photo)}
+    alt={photo.alt}
+    widths={[480, 800, 1200, 1600]}
+    sizes="(min-width: 960px) 44rem, calc(100vw - 3rem)"
+    loading={eager ? "eager" : "lazy"}
+    fetchpriority={eager ? "high" : "auto"}
+  />
+  <figcaption>{photo.caption} <span class="photo-credit">Photo by {PHOTOGRAPHER}</span></figcaption>
+</figure>

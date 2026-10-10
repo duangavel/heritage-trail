@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import board from "../data/board.json";
+import { TRAIL_NAME } from "../lib/trail";
+import { PHOTOGRAPHER } from "../lib/photos";
+---
+<Base title={`About the Trail · ${TRAIL_NAME}`} description="The people and partners behind the Springfield-Greene County African American Heritage Trail.">
+  <article class="about">
+    <a class="back" href="/">← The walk</a>
+    <h1>About the Trail</h1>
+    <p class="lede">The trail is led by the Springfield-Greene County African American Heritage Trail Committee with partners including the City of Springfield, Missouri State University, Ozark Greenways, the Springfield-Greene County Park Board and the Community Foundation of the Ozarks, which accepts donations for new markers.</p>
+
+    <section class="roll" aria-labelledby="board-h">
+      <p class="roll-kicker" aria-hidden="true">With gratitude</p>
+      <h2 id="board-h">{board.title}</h2>
+      <ol class="roll-list">
+        {board.members.map((m) => (
+          <li>
+            <span class="roll-name">{m.name}</span>
+            <span class="roll-role">{m.role}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="credits-h">
+      <h2 id="credits-h">Website</h2>
+      <p class="about-credit">Website designed and donated by the Gavel and Horton families.</p>
+      <p class="section-intro">Photographs by {PHOTOGRAPHER}.</p>
+    </section>
+  </article>
+
+  <SiteFooter />
+</Base>
+
+<script>
+  import { renderPassport, initMapCaptions } from "../scripts/passport";
+  initMapCaptions();
+  renderPassport();
+</script>

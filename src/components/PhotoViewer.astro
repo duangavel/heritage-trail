@@ -1,0 +1,16 @@
+---
+/* One shared full-screen photo viewer per page; opened from any [data-gallery] link. */
+---
+<dialog class="viewer" id="viewer" aria-label="Photo viewer">
+  <figure>
+    <img alt="" id="viewerImg" />
+    <figcaption><span id="viewerCaption"></span> <span class="viewer-count" id="viewerCount"></span></figcaption>
+  </figure>
+  <button class="viewer-btn viewer-close" type="button" data-viewer="close" aria-label="Close photo">×</button>
+  <button class="viewer-btn viewer-prev" type="button" data-viewer="prev" aria-label="Previous photo">‹</button>
+  <button class="viewer-btn viewer-next" type="button" data-viewer="next" aria-label="Next photo">›</button>
+</dialog>
+
+<script>
+  import "../scripts/viewer.ts";
+</script>

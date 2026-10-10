@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
 import TrailMap from "../components/TrailMap.astro";
+import emblem from "../assets/logo/trail-emblem.png";
 import { TRAIL_NAME } from "../lib/trail";
 
 interface Props {
@@ -23,7 +25,8 @@ const { title, description, activeId, caption = "" } = Astro.props;
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#12352B" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,800;1,400&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -32,7 +35,16 @@ const { title, description, activeId, caption = "" } = Astro.props;
 <body>
 <div class="wrap">
   <aside class="map-col" aria-label="Trail map">
-    <div class="map-head"><a class="trail-name" href="/">{TRAIL_NAME}</a></div>
+    <div class="map-head">
+      <a class="brand" href="/">
+        <Image src={emblem} alt="" width={96} densities={[1, 2]} class="brand-emblem" loading="eager" />
+        <span class="trail-name">{TRAIL_NAME}</span>
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/" aria-current={Astro.url.pathname === "/" ? "page" : undefined}>The walk</a>
+        <a href="/about/" aria-current={Astro.url.pathname.startsWith("/about") ? "page" : undefined}>About the Trail</a>
+      </nav>
+    </div>
     <div class="map-frame"><TrailMap activeId={activeId} /></div>
     <p class="map-caption" id="mapCaption" aria-hidden="true">{caption}</p>
     <p class="map-legend">Tap a stop to read its story. Map is a guide, not to scale.</p>

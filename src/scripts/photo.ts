@@ -13,6 +13,11 @@ export function initPhoto(root: HTMLElement, opts: { currentIndex: () => number;
   const ctx = canvas.getContext("2d")!;
   let framedIndex = -1;
 
+  // Trail emblem for the frame; the photo still frames fine if it fails to load.
+  const emblem = new Image();
+  const emblemReady = new Promise<boolean>((res) => { emblem.onload = () => res(true); emblem.onerror = () => res(false); });
+  emblem.src = "/frame-emblem.png";
+
   function wrapText(text: string, x: number, y: number, maxW: number, lh: number) {
     const lines: string[] = [];
     let line = "";
@@ -42,6 +47,7 @@ export function initPhoto(root: HTMLElement, opts: { currentIndex: () => number;
         document.fonts.load("400 30px 'Public Sans'"),
       ]);
     } catch {}
+    const hasEmblem = await emblemReady;
 
     const Wc = 1080, Hc = 1350, band = 360;
     ctx.fillStyle = "#12352B"; ctx.fillRect(0, 0, Wc, Hc);
@@ -50,12 +56,16 @@ export function initPhoto(root: HTMLElement, opts: { currentIndex: () => number;
     ctx.drawImage(img, (Wc - w) / 2, (ph - h) / 2, w, h); ctx.restore();
     ctx.fillStyle = "#B8901E"; ctx.fillRect(0, ph, Wc, 10);
     ctx.strokeStyle = "#B8901E"; ctx.lineWidth = 14; ctx.strokeRect(7, 7, Wc - 14, Hc - 14);
+    // emblem sits at the right of the caption band; text wraps short of it
+    const emW = 200, emH = hasEmblem ? Math.round((emblem.height / emblem.width) * emW) : 0;
+    if (hasEmblem) ctx.drawImage(emblem, Wc - 56 - emW, ph + 46, emW, emH);
+    const textW = Wc - 128 - (hasEmblem ? emW + 24 : 0);
     ctx.fillStyle = "#E7D49A"; ctx.font = "600 34px 'Public Sans', Arial, sans-serif";
     ctx.fillText(`I walked the trail. Stop ${index + 1} of ${STOPS.length}`, 64, ph + 78);
     ctx.fillStyle = "#F4EFE0"; ctx.font = "800 72px Bitter, Georgia, serif";
-    const n = wrapText(s.name, 64, ph + 160, Wc - 128, 78);
+    const n = wrapText(s.name, 64, ph + 160, textW, 78);
     ctx.fillStyle = "#B9C4BD"; ctx.font = "400 30px 'Public Sans', Arial, sans-serif";
-    ctx.fillText(TRAIL_NAME, 64, Math.min(ph + 160 + n * 78 + 16, Hc - 48));
+    ctx.fillText(TRAIL_NAME, 64, Math.max(Math.min(ph + 160 + n * 78 + 16, Hc - 48), ph + 46 + emH + 40));
 
     framedIndex = index;
     panel.classList.add("show");

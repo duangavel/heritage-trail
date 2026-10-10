@@ -32,8 +32,12 @@ function openStop(id: string) {
   $("sheetStop").textContent = `Stop ${i + 1} of ${STOPS.length}. ${s.meta}`;
   $("sheetTitle").textContent = s.name;
   $("sheetWhere").textContent = s.where;
-  $("sheetStory").textContent = s.story;
-  $<HTMLAnchorElement>("dirLink").href = directionsUrl(s);
+  $("sheetStory").textContent = s.comingSoon ? "This marker's story is coming soon." : s.story;
+  $("sheetStory").classList.toggle("coming-soon", !!s.comingSoon);
+  document.querySelectorAll<HTMLElement>("[data-photos-for]").forEach((el) => { el.hidden = el.dataset.photosFor !== s.id; });
+  const dir = directionsUrl(s), dirLink = $<HTMLAnchorElement>("dirLink");
+  dirLink.hidden = !dir;
+  if (dir) dirLink.href = dir;
   updateVisitBtn();
   const next = STOPS[i + 1];
   nextBtn.hidden = !next;
