@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import TrailMap from "../components/TrailMap.astro";
 import emblem from "../assets/logo/trail-emblem.png";
 import { TRAIL_NAME } from "../lib/trail";
+import { HIDE_FROM_SEARCH_ENGINES } from "../config";
 
 interface Props {
   title: string;
@@ -25,6 +26,7 @@ const { title, description, activeId, caption = "" } = Astro.props;
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#12352B" />
+  {HIDE_FROM_SEARCH_ENGINES && <meta name="robots" content="noindex, nofollow" />}
   <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

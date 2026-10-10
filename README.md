@@ -25,6 +25,11 @@ Each marker's QR code should link to its stop page, for example `https://<site>/
 Opening a stop page from a QR code (or any link from outside the site) welcomes the visitor and stamps their trail passport.
 Older links in the form `/?stop=kentwood` still work and redirect to the stop page.
 
+## Launch day
+
+Until launch the site asks search engines not to list it (a `noindex` tag on every page and a `robots.txt` that blocks crawling).
+To open it up, set `HIDE_FROM_SEARCH_ENGINES = false` in [`src/config.ts`](src/config.ts), then commit and push.
+
 ## Running it
 
 ```sh
