@@ -16,8 +16,8 @@
     "meta": "Marker No. 11, dedicated 2026",
     "lat": 37.2082,
     "lng": -93.2832,
-    "teaser": "A Route 66 grand hotel that integrated overnight, then reversed course.",
-    "story": "Opened in 1926 on Route 66, the Kentwood Arms was Springfield's grand hotel, hosting entertainers and presidents. It was also segregated. In 1960, with a national press corps about to arrive, local leaders and the hotel opened its doors to Black guests practically overnight, making it the first hotel in town to fully serve them. Two years later the owner re-segregated, saying integration was bad for business. The marker tells the whole story: progress, retreat, and the long road between. Missouri State bought the building in 1984; today it is Kentwood Hall."
+    "teaser": "A Route 66 grand hotel that desegregated in 1960, then reversed course in 1962.",
+    "story": "Built in 1926 by local developer John T. Woodruff, the five-story Kentwood Arms on Route 66 quickly became a social and cultural landmark, hosting guests such as President Harry Truman, Bob Hope and Groucho Marx. It was also a segregated hotel.\n\nIn 1960, during Richard Nixon's campaign stop as vice president, Republican officials warned that Nixon would cancel his visit if the two Black members of the press traveling with him were denied lodging, and the local NAACP threatened to picket the hotel. City leaders decided to open public accommodation to everyone, and owner Earl Moulder announced the hotel's permanent desegregation. Other businesses, including Heer's department store, followed. In 1962, Moulder reversed course, claiming Springfield was “not quite ready.” The reversal reignited protests, and the Civil Rights Act of 1964 ultimately outlawed racial discrimination in public accommodations.\n\nSouthwest Missouri State University bought the building in 1984. Today it is Kentwood Hall."
   },
   {
     "id": "square",
@@ -27,7 +27,7 @@
     "lat": 37.2089,
     "lng": -93.2923,
     "teaser": "Where the 1906 Easter lynchings took place.",
-    "story": "On Easter weekend in April 1906, a white mob took three Black men, Horace Duncan, Fred Coker and Will Allen, from the county jail and lynched them on the public square. None was ever tried. In the months that followed, many Black families left Springfield for good, and a growing community shrank for generations. This marker, placed in partnership with the Equal Justice Initiative, asks everyone who crosses the square to remember what happened at the center of the city."
+    "story": "On Good Friday, April 13, 1906, Springfield and Greene County had a thriving population of African American professionals, business owners and community leaders. By the early hours of Easter Sunday, a false allegation that two Black men, Horace B. Duncan and Fred Coker, had assaulted a white woman had turned into a lynch mob. The two men had been taken to the city jail for their protection, where a third young Black man, William Allen, was already being held. The mob broke into the jail, took Mr. Duncan and Mr. Coker to the city square and hanged them from the Gottfried Tower, an iron structure topped with a replica of the Statue of Liberty. Then it returned to the jail for Mr. Allen and lynched him too. A crowd of thousands watched.\n\nFearing further violence, many African Americans left the city, some never to return. A grand jury indicted eighteen men who were involved. One man was brought to trial, but no one was ever convicted of these murders."
   },
   {
     "id": "sawyers",
@@ -37,17 +37,18 @@
     "lat": 37.2116,
     "lng": -93.2925,
     "teaser": "An enslaved woman who sued for her freedom in the 1830s, and won.",
-    "story": "In the 1830s, Milly Sawyers, an enslaved woman who had previously lived as free, went to court and argued that the law entitled her to her freedom. She was among the first enslaved people in Missouri to sue for freedom, and she won her case in Greene County. Her court papers sat forgotten until Greene County archivist Connie Yen came across them in 2017. The marker stands near the place where Sawyers was assaulted."
+    "story": "Milly Sawyers, an enslaved African American woman, had lived in Ohio, a state that outlawed slavery, and argued that this made her free. She lost freedom suits in 1829 and 1833. In 1834 she was sold to Greene County resident William Ivey, and later that year she petitioned the court again, in what was possibly one of the first cases ever heard in Greene County circuit court. In August 1835 the court ruled that she was a free woman.\n\nOn April 1, 1836, a mob that included John P. Campbell, the founder of Springfield, broke into John Edwards' home at the northwest corner of Boonville Avenue and Olive Street, forced Sawyers onto the street and brutally beat her. She survived. Members of the mob were charged with rioting and assault, though the verdict remains unknown.\n\nHer court papers sat forgotten until Greene County archivist Connie Yen came across them in 2017. The marker stands near the place where Sawyers was assaulted."
   },
   {
     "id": "alberta",
     "name": "Alberta's Hotel",
-    "where": "North side, near Benton Ave. (location to confirm)",
+    "where": "625 N. Benton Ave., in front of the Springfield Municipal Court building",
     "meta": "A Route 66 site",
-    "lat": 37.2140,
-    "lng": -93.2882,
+    "lat": 37.2144,
+    "lng": -93.2879,
     "teaser": "A safe place to stay for Black travelers on the Mother Road.",
-    "story": "During segregation, Black travelers on Route 66 could not count on finding a room. Alberta's Hotel offered one, a safe place to stay in a city where most hotels turned them away. It is one of three markers on the trail tied to the Mother Road, alongside the Kentwood Arms and Graham's Rib Station."
+    "story": "During segregation, Black travelers on Route 66 could not count on finding a room. Alberta's Hotel offered one, a safe place to stay in a city where most hotels turned them away. It is one of three markers on the trail tied to the Mother Road, alongside the Kentwood Arms and Graham's Rib Station.",
+    "status": "pending confirmation"
   },
   {
     "id": "churchsouth",
@@ -67,7 +68,7 @@
     "lat": 37.2150,
     "lng": -93.2866,
     "teaser": "Completing the square of four historic Black churches.",
-    "story": "Four historic Black congregations stand within a few blocks of each other here: Washington Avenue Baptist, Benton Avenue AME, Gibson Chapel Presbyterian and Pitts Chapel United Methodist. This marker honors Washington Avenue Baptist Church and completes the church square, the spiritual and civic center of Black Springfield for more than 150 years."
+    "story": "The north side of the church square honors two congregations, both founded in 1867. Benton Avenue African Methodist Episcopal Church stands at North Benton Avenue and East Central Street; its current building was completed in 1926 and placed on the National Register of Historic Places in 2001. In 1959 the church welcomed Rev. Oliver L. Brown, the lead plaintiff in Brown v. Board of Education.\n\nWashington Avenue Baptist Church began as a mission of the white First Baptist Church. Many Lincoln School educators were among its members and leaders, and in the 1960s and early 1970s its pastor, Rev. William E. Pitts, and its members worked with the NAACP and the Civil Rights Movement in Springfield. In 2000 the congregation moved to North National Avenue, and Drury University moved the historic church building brick by brick 300 feet north and restored it as a Diversity Center."
   },
   {
     "id": "grahams",
@@ -77,7 +78,7 @@
     "lat": 37.2195,
     "lng": -93.2852,
     "teaser": "Barbecue and guest cabins for travelers on Route 66.",
-    "story": "Graham's Rib Station served barbecue and rented guest cabins along Chestnut Expressway, then part of Route 66. In an era when Black motorists had to plan every stop around where they would be welcome, it was a place they could count on for a meal and a bed."
+    "story": "In 1932, Zelma and James Graham opened The Rib Station at the corner of Washington Avenue and Chestnut Street. In the 1940s they built six stone cottages nearby, which became Graham's Modern Tourist Court. Chestnut Street was a Route 66 bypass, and many travelers stopped to eat and to sleep.\n\nFor 35 years, until it closed in 1967, the restaurant was a social hub for Springfield's African-American community. Famous entertainers ate and stayed at Graham's, including Duke Ellington, Pearl Bailey, Lionel Hampton, Louis Bellson and Harry Belafonte."
   },
   {
     "id": "lincoln",
