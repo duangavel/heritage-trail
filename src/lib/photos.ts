@@ -10,6 +10,8 @@ export interface PhotoEntry {
   source: string;
   alt: string;
   caption: string;
+  /** Applied by npm run photos: rotation in degrees, then a trim given as fractions of the straightened photo. */
+  crop?: { rotate?: number; left: number; top: number; width: number; height: number };
 }
 export interface PhotoEvent {
   id: string;

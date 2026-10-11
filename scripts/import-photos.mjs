@@ -1,7 +1,9 @@
 // Copies the photos listed in src/data/photos.json from the local images/ folder into src/assets/photos/.
 //
 // Each photo's "source" is its path inside images/ (the originals stay there and are never committed).
-// Copies are resized to at most 2000px on the long edge and stripped of camera metadata, including GPS;
+// An optional "crop" ({ rotate?, left, top, width, height }, as fractions of the upright, straightened photo) straightens
+// and trims the photo first. Copies are resized to at most 2000px on the long edge and stripped of camera
+// metadata, including GPS;
 // Astro then makes the phone-sized versions at build time.
 //
 // usage: npm run photos            copy any photos that are missing
@@ -23,8 +25,17 @@ for (const p of all) {
   const src = path.join(root, "images", p.source);
   if (!fs.existsSync(src)) { missing.push(p.source); continue; }
   fs.mkdirSync(path.dirname(dest), { recursive: true });
-  await sharp(src)
-    .rotate() // apply camera orientation before metadata is dropped
+  // apply camera orientation before metadata is dropped
+  let img = sharp(await sharp(src).rotate().toBuffer());
+  if (p.crop) {
+    if (p.crop.rotate) img = sharp(await img.rotate(p.crop.rotate, { background: "#000" }).toBuffer());
+    const { width: w, height: h } = await img.metadata();
+    img = img.extract({
+      left: Math.round(p.crop.left * w), top: Math.round(p.crop.top * h),
+      width: Math.round(p.crop.width * w), height: Math.round(p.crop.height * h),
+    });
+  }
+  await img
     .resize(2000, 2000, { fit: "inside", withoutEnlargement: true })
     .jpeg({ quality: 84, mozjpeg: true })
     .toFile(dest);

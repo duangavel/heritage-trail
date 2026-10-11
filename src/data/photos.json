@@ -372,12 +372,68 @@
     "lincoln": {
       "lead": {
         "file": "lincoln/lead.jpg",
-        "source": "Lincoln School/pic 8 Lincoln School-Lincoln Hall.JPG",
-        "alt": "The long two-story red brick Lincoln School building, now OTC Lincoln Hall, behind a wide green lawn under a blue sky.",
-        "caption": "Lincoln Hall, formerly Lincoln School."
+        "source": "Lincoln School/Lincoln School 3.jpg",
+        "alt": "The Lincoln School marker on a post in front of a red brick building, next to a stone doorway carved \"Lincoln Hall\" above the street number 815.",
+        "caption": "The Lincoln School marker beside the entrance to Lincoln Hall.",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 1,
+          "height": 0.9
+        }
       },
-      "note": "This photo shows the building, not the marker. Replace it when a marker photo is available.",
-      "events": []
+      "events": [
+        {
+          "id": "lincoln-today",
+          "title": "Lincoln School, now Lincoln Hall",
+          "date": null,
+          "timeline": false,
+          "photos": [
+            {
+              "file": "lincoln/today-01.jpg",
+              "source": "Lincoln School/Lincoln School 4.jpg",
+              "alt": "Close view of the Lincoln School marker text, which traces the school from 1872 to Ozarks Technical Community College's Lincoln Hall.",
+              "caption": "The marker traces the school's history from 1872."
+            },
+            {
+              "file": "lincoln/today-02.jpg",
+              "source": "Lincoln School/Lincoln School 6.jpg",
+              "alt": "The marker on the lawn in front of Lincoln Hall's entrance, a two-story brick building with stone trim, framed by autumn branches.",
+              "caption": "The marker in front of Lincoln Hall, October 2026.",
+              "crop": {
+                "left": 0.03,
+                "top": 0,
+                "width": 0.97,
+                "height": 1
+              }
+            },
+            {
+              "file": "lincoln/today-03.jpg",
+              "source": "Lincoln School/Lincoln School 5.jpg",
+              "alt": "A bronze National Register of Historic Places plaque for Lincoln High School, \"First Julius Rosenwald School in Missouri, dedicated May 21, 1931,\" on a brick wall.",
+              "caption": "The National Register plaque for Lincoln High School."
+            },
+            {
+              "file": "lincoln/today-04.jpg",
+              "source": "Lincoln School/Lincoln School 1.jpg",
+              "alt": "The long two-story brick front of Lincoln Hall behind a lawn and sidewalk, with lamp posts and young trees.",
+              "caption": "Lincoln Hall, October 2026.",
+              "crop": {
+                "left": 0.06,
+                "top": 0,
+                "width": 0.94,
+                "height": 1
+              }
+            },
+            {
+              "file": "lincoln/today-05.jpg",
+              "source": "Lincoln School/pic 8 Lincoln School-Lincoln Hall.JPG",
+              "alt": "The long two-story red brick Lincoln School building, now OTC Lincoln Hall, behind a wide green lawn under a blue sky.",
+              "caption": "Lincoln Hall in 2008."
+            }
+          ]
+        }
+      ]
     },
     "silver": {
       "lead": {
@@ -499,6 +555,162 @@
           ]
         }
       ]
+    },
+    "square": {
+      "events": [
+        {
+          "id": "square-today",
+          "title": "The marker on the square",
+          "date": "2026-10-10",
+          "timeline": false,
+          "photos": [
+            {
+              "file": "square/today-01.jpg",
+              "source": "Park Central Square/Downtown Square 2.jpg",
+              "alt": "The blue marker on its post in a small brick plaza with shrubs and planters, beside a \"No stopping or standing\" sign.",
+              "caption": "The marker stands on a plaza at the edge of the square."
+            },
+            {
+              "file": "square/today-02.jpg",
+              "source": "Park Central Square/Downtown Square 4.jpg",
+              "alt": "Park Central Square on a sunny day: trees, a stepped fountain and planters, with the Heers building and a white office tower behind.",
+              "caption": "Park Central Square, the center of downtown Springfield."
+            }
+          ]
+        }
+      ],
+      "lead": {
+        "file": "square/lead.jpg",
+        "source": "Park Central Square/Downtown Square.jpg",
+        "alt": "A blue and gold historical marker titled \"The Lynchings of Horace B. Duncan, Fred Coker, and William Allen\" on a post beside a street lamp, in front of downtown brick and white stone buildings.",
+        "caption": "The marker on Park Central Square, placed with the Equal Justice Initiative.",
+        "crop": {
+          "left": 0.09,
+          "top": 0,
+          "width": 0.87,
+          "height": 1
+        }
+      }
+    },
+    "alberta": {
+      "events": [
+        {
+          "id": "alberta-today",
+          "title": "The marker today",
+          "date": "2026-10-10",
+          "timeline": false,
+          "photos": [
+            {
+              "file": "alberta/today-01.jpg",
+              "source": "Albertas Hotel/Albertas Hotel 2.jpg",
+              "alt": "The Alberta's Hotel marker seen from below against a blue sky, with utility poles and power lines behind it.",
+              "caption": "The marker tells the story of Alberta Ellis and her hotel."
+            },
+            {
+              "file": "alberta/today-02.jpg",
+              "source": "Albertas Hotel/Albertas Hotel 1.jpg",
+              "alt": "The marker beside a black sign reading \"City of Springfield Municipal Court 625,\" with downtown buildings in the distance.",
+              "caption": "The marker beside the Municipal Court sign."
+            }
+          ]
+        }
+      ],
+      "lead": {
+        "file": "alberta/lead.jpg",
+        "source": "Albertas Hotel/Albertas Hotel 3.jpg",
+        "alt": "The Alberta's Hotel marker, a black trail marker with the African-American Heritage Trail emblem, on a post in front of a low brick building marked \"Municipal Court 625\" under a clear blue sky.",
+        "caption": "The Alberta's Hotel marker in front of the Springfield Municipal Court building.",
+        "crop": {
+          "left": 0.11,
+          "top": 0.07,
+          "width": 0.89,
+          "height": 0.93
+        }
+      }
+    },
+    "churchsouth": {
+      "events": [
+        {
+          "id": "churchsouth-today",
+          "title": "Church Square South today",
+          "date": "2026-10-10",
+          "timeline": false,
+          "photos": [
+            {
+              "file": "churchsouth/today-01.jpg",
+              "source": "Church Square South/Church Square South 2.jpg",
+              "alt": "Close view of the Church Square South marker text, which describes Pitts Chapel United Methodist Church and Gibson Chapel, against a blue sky.",
+              "caption": "The marker tells the story of Pitts Chapel and Gibson Chapel."
+            },
+            {
+              "file": "churchsouth/today-02.jpg",
+              "source": "Church Square South/Church Square South 3.jpg",
+              "alt": "A red brick church with a square bell tower, tall stained-glass windows and a covered entrance, with a \"Pitts Chapel\" sign on the lawn.",
+              "caption": "Pitts Chapel United Methodist Church."
+            },
+            {
+              "file": "churchsouth/today-03.jpg",
+              "source": "Church Square South/Church Square South 4.jpg",
+              "alt": "A stone cornerstone set in red brick, carved \"Pitts M.E. Church 1911.\"",
+              "caption": "The 1911 cornerstone of Pitts Chapel."
+            }
+          ]
+        }
+      ],
+      "lead": {
+        "file": "churchsouth/lead.jpg",
+        "source": "Church Square South/Church Square South 1.jpg",
+        "alt": "The Church Square South marker on a metal post in a grassy lot, next to a two-story red brick church building with a stone foundation, under a deep blue sky.",
+        "caption": "The Church Square South marker.",
+        "crop": {
+          "left": 0.04,
+          "top": 0.06,
+          "width": 0.96,
+          "height": 0.88
+        }
+      }
+    },
+    "cemetery": {
+      "events": [
+        {
+          "id": "cemetery-today",
+          "title": "Lincoln Memorial Cemetery today",
+          "date": "2026-10-10",
+          "timeline": false,
+          "photos": [
+            {
+              "file": "cemetery/today-01.jpg",
+              "source": "Lincoln Memorial/Lincoln Cemetery 4.jpg",
+              "alt": "Close view of the cemetery marker text against autumn trees, above the chain-link fence.",
+              "caption": "The marker tells the cemetery's history since 1919."
+            },
+            {
+              "file": "cemetery/today-02.jpg",
+              "source": "Lincoln Memorial/Lincoln Cemetery 5.jpg",
+              "alt": "A large granite entrance sign engraved \"Lincoln Memorial Cemetery, Est. 1919,\" with the fenced cemetery behind it.",
+              "caption": "The cemetery's entrance sign."
+            },
+            {
+              "file": "cemetery/today-03.jpg",
+              "source": "Lincoln Memorial/Lincoln Cemetery 2.jpg",
+              "alt": "A double granite headstone engraved \"Billings\" in the sunny cemetery grounds, with other headstones and a large tree behind it.",
+              "caption": "Headstones on the cemetery grounds."
+            }
+          ]
+        }
+      ],
+      "lead": {
+        "file": "cemetery/lead.jpg",
+        "source": "Lincoln Memorial/Lincoln Cemetery 3.jpg",
+        "alt": "The Lincoln Memorial Cemetery marker on a post beside a chain-link fence, with rows of headstones and large trees on the grounds behind it.",
+        "caption": "The marker at the edge of Lincoln Memorial Cemetery.",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 1,
+          "height": 0.9
+        }
+      }
     }
   }
 }
