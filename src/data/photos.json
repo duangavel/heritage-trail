@@ -438,12 +438,37 @@
     "silver": {
       "lead": {
         "file": "silver/lead.jpg",
-        "source": "Silver Springs Park/Silver Springs Park.jpg",
-        "alt": "A wooden sign reading \"Silver Springs Park, Springfield-Greene Co. Park Board\" on a grassy lawn, with a small stone building and parked cars behind it.",
-        "caption": "The entrance sign at Silver Springs Park."
+        "source": "Silver Springs Park/Silver Springs-3.jpg",
+        "alt": "The Silver Springs Park marker on a metal post on a grassy lawn, in front of Timmons Hall, a stone building with a white entrance, under a clear blue sky.",
+        "caption": "The Silver Springs Park marker in front of Timmons Hall."
       },
-      "note": "This photo shows the park sign, not the marker. Replace it when a marker photo is available.",
       "events": [
+        {
+          "id": "silver-today",
+          "title": "Silver Springs Park today",
+          "date": null,
+          "timeline": false,
+          "photos": [
+            {
+              "file": "silver/today-01.jpg",
+              "source": "Silver Springs Park/Silver Springs-2.jpg",
+              "alt": "Close view of the Silver Springs Park marker text, which tells of the park’s founding in 1918, segregation-era sports leagues and the Park Day Reunion, with the park’s lawn and lamp posts behind it.",
+              "caption": "The marker tells the park’s story from 1918 to the Park Day Reunion, October 2026.",
+              "crop": {
+                "left": 0.11,
+                "top": 0,
+                "width": 0.89,
+                "height": 1
+              }
+            },
+            {
+              "file": "silver/today-02.jpg",
+              "source": "Silver Springs Park/Silver Springs Park.jpg",
+              "alt": "A wooden sign reading \"Silver Springs Park, Springfield-Greene Co. Park Board\" on a grassy lawn, with a small stone building and parked cars behind it.",
+              "caption": "The entrance sign at Silver Springs Park."
+            }
+          ]
+        },
         {
           "id": "silver-groundbreaking",
           "title": "Pavilion renovation groundbreaking",
