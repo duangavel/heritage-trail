@@ -7,6 +7,9 @@ import { Image } from "astro:assets";
 import { STOPS, TRAIL_NAME, stopUrl, countWord, capitalize, formatDate } from "../lib/trail";
 import { photosFor, timeline, imageFor, PHOTOGRAPHER } from "../lib/photos";
 import emblem from "../assets/logo/trail-emblem.png";
+import SupportTrail from "../components/SupportTrail.astro";
+import Testimonials from "../components/Testimonials.astro";
+import intro from "../data/intro.json";
 
 const ids = STOPS.map((s) => s.id);
 const count = capitalize(countWord(STOPS.length));
@@ -32,6 +35,12 @@ const dedications = timeline();
     <a class="btn btn-ghost" href="#photo-how">Take a trail photo</a>
   </div>
   <p class="passport" aria-live="polite" data-passport>Your trail passport fills in as you visit stops.</p>
+
+  {/* Wording lives in src/data/intro.json. */}
+  <section class="intro" aria-labelledby="intro-h">
+    <h2 id="intro-h">{intro.title}</h2>
+    {intro.paragraphs.map((p) => <p>{p}</p>)}
+  </section>
 
   <h2 id="stops-h">The walk</h2>
   <p class="section-intro">Stops 1 to 11 run south to north, from the Missouri State campus up through the historic church square to Silver Springs Park and Lincoln Memorial Cemetery. Stop 12, the newest marker, is a few blocks east of Lincoln School (stop 9).</p>
@@ -80,6 +89,8 @@ const dedications = timeline();
     <p class="qr-url">Each code links to the stop's own page, for example <code>/stops/{STOPS[1].id}</code>.</p>
   </div>
 
+  <Testimonials />
+
   <h2>Stories still to be marked</h2>
   <p class="section-intro">The committee plans more markers. Among the places named for future recognition:</p>
   <div class="coming">
@@ -87,6 +98,8 @@ const dedications = timeline();
     <div><strong>Jones Alley Business District</strong><span>A downtown district of Black-owned businesses that no longer stands.</span></div>
     <div><strong>Happy Hollow</strong><span>A Black neighborhood on the north side of Sherman Avenue.</span></div>
   </div>
+
+  <SupportTrail />
 
   <SiteFooter />
 
@@ -100,10 +113,11 @@ const dedications = timeline();
       {STOPS.map((s) => {
         const { lead, events } = photosFor(s.id);
         const gallery = events.find((e) => e.photos.length);
-        return (lead || gallery) && (
+        return (lead || gallery || s.oralHistory) && (
           <div data-photos-for={s.id} hidden>
             {lead && <LeadPhoto photo={lead} />}
             {gallery && <p class="sheet-gallery-link"><a href={`${stopUrl(s.id)}#${gallery.id}-h`}>See {gallery.title.toLowerCase()} photos →</a></p>}
+            {s.oralHistory && <p class="sheet-gallery-link"><a href={`${stopUrl(s.id)}#oral-h`}>Listen to the oral history →</a></p>}
           </div>
         );
       })}
@@ -113,7 +127,6 @@ const dedications = timeline();
         <button class="btn btn-ghost" id="visitBtn" type="button">Mark as visited</button>
         <a class="btn btn-ghost" id="nextBtn"></a>
       </PhotoTool>
-      <div class="listen">Oral history: recorded interviews from The Journey Continues project will play here.</div>
     </section>
   </Fragment>
 </Base>

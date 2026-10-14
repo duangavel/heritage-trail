@@ -19,6 +19,15 @@ All stop text lives in [`src/data/stops.json`](src/data/stops.json). Each stop h
 
 Stops are numbered in the order they appear in the file. Adding or removing an entry updates the map, list, page count and stop pages automatically.
 
+## Other editable content
+
+- **Introduction** (home page, "About the trail"): [`src/data/intro.json`](src/data/intro.json). Currently a draft for Dr. Lyle Foster to revise; replace the `paragraphs` and remove `status` when final.
+- **Testimonials**: [`src/data/testimonials.json`](src/data/testimonials.json), a list of `{ "quote": "...", "name": "...", "role": "..." }` (`role` is optional). The home page section stays hidden while the list is empty.
+- **Oral histories**: put the audio file in `public/audio/` and add an `oralHistory` entry to the stop in `stops.json`:
+  `{ "src": "/audio/kentwood.mp3", "title": "...", "speaker": "...", "transcript": "..." }`. A transcript is required. Stops without one show no player.
+- **Advisory Board**: [`src/data/board.json`](src/data/board.json).
+- **Donate link**: `DONATE_URL` in [`src/config.ts`](src/config.ts).
+
 ## QR codes
 
 Each marker's QR code should link to its stop page, for example `https://<site>/stops/kentwood`.

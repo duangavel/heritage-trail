@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import SupportTrail from "../components/SupportTrail.astro";
 import board from "../data/board.json";
 import { TRAIL_NAME } from "../lib/trail";
 import { PHOTOGRAPHER } from "../lib/photos";
@@ -29,6 +30,7 @@ import { PHOTOGRAPHER } from "../lib/photos";
       <p class="about-credit">Website designed and donated by the Gavel and Horton families.</p>
       <p class="section-intro">Photographs by {PHOTOGRAPHER}.</p>
     </section>
+    <SupportTrail />
   </article>
 
   <SiteFooter />

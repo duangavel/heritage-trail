@@ -5,6 +5,7 @@ import SiteFooter from "../../components/SiteFooter.astro";
 import LeadPhoto from "../../components/LeadPhoto.astro";
 import Gallery from "../../components/Gallery.astro";
 import PhotoViewer from "../../components/PhotoViewer.astro";
+import OralHistory from "../../components/OralHistory.astro";
 import { STOPS, TRAIL_NAME, stopUrl, directionsUrl, storyParagraphs, type Stop } from "../../lib/trail";
 import { photosFor } from "../../lib/photos";
 
@@ -41,7 +42,7 @@ const galleries = events.filter((e) => e.photos.length);
 
     {galleries.map((e) => <Gallery event={e} />)}
 
-    <div class="listen">Oral history: recorded interviews from The Journey Continues project will play here.</div>
+    {s.oralHistory && <OralHistory oral={s.oralHistory} />}
 
     <nav class="stop-nav" aria-label="Other stops">
       {prev && <a href={stopUrl(prev.id)}><small>← Stop {i}</small><strong>{prev.name}</strong></a>}

@@ -1,0 +1,25 @@
+---
+/* Quotes come from src/data/testimonials.json; the whole section is left out while that file is empty. */
+import data from "../data/testimonials.json";
+
+interface Testimonial { quote: string; name: string; role?: string }
+const items = data as Testimonial[];
+for (const t of items) {
+  if (!t.quote?.trim() || !t.name?.trim()) throw new Error("Each entry in src/data/testimonials.json needs a quote and a name.");
+}
+---
+{items.length > 0 && (
+  <section class="testimonials" aria-labelledby="testimonials-h">
+    <h2 id="testimonials-h">What people are saying about the trail</h2>
+    <ul class="quote-list">
+      {items.map((t) => (
+        <li>
+          <figure>
+            <blockquote><p>{t.quote}</p></blockquote>
+            <figcaption><span class="quote-name">{t.name}</span>{t.role && <span class="quote-role">{t.role}</span>}</figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

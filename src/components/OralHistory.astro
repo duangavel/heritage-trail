@@ -1,0 +1,41 @@
+---
+/*
+ * Oral history for one stop, from the stop's "oralHistory" entry in src/data/stops.json.
+ * Without JavaScript the browser's own audio controls show; src/scripts/oral.ts swaps in larger,
+ * labeled play/pause and seek controls. The transcript is always available on the page.
+ */
+import type { OralHistory } from "../lib/trail";
+
+interface Props { oral: OralHistory }
+const { oral } = Astro.props;
+const paragraphs = oral.transcript.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+---
+<section class="oral" aria-labelledby="oral-h" data-oral>
+  <h2 id="oral-h">Oral history</h2>
+  <p class="oral-title">{oral.title}</p>
+  {oral.speaker && <p class="oral-speaker">{oral.speaker}</p>}
+
+  <audio src={oral.src} preload="metadata" controls data-oral-audio>
+    <a href={oral.src}>Download the recording</a>
+  </audio>
+
+  <div class="oral-player" data-oral-player hidden>
+    <button class="oral-play" type="button" data-oral-toggle aria-label="Play recording">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-play"><path d="M8 5v14l11-7z" /></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z" /></svg>
+    </button>
+    <div class="oral-track">
+      <input type="range" min="0" max="0" step="1" value="0" data-oral-seek aria-label="Position in recording" />
+      <p class="oral-time"><span data-oral-current>0:00</span> / <span data-oral-duration>–:––</span></p>
+    </div>
+  </div>
+
+  <details class="oral-transcript">
+    <summary>Read the transcript</summary>
+    <div>{paragraphs.map((p) => <p>{p}</p>)}</div>
+  </details>
+</section>
+
+<script>
+  import "../scripts/oral.ts";
+</script>

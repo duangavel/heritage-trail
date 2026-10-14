@@ -1,5 +1,16 @@
 import stopsData from "../data/stops.json";
 
+/** A recorded interview for a stop. Audio files go in public/audio/. */
+export interface OralHistory {
+  /** Path to the recording, e.g. "/audio/kentwood.mp3". */
+  src: string;
+  title: string;
+  /** Who is speaking, e.g. "Elaine Estes Graham, interviewed in 2026". */
+  speaker?: string;
+  /** Full transcript; separate paragraphs with a blank line. Required, so the recording is accessible to everyone. */
+  transcript: string;
+}
+
 export interface Stop {
   id: string;
   name: string;
@@ -15,11 +26,19 @@ export interface Stop {
   teaser: string;
   /** Paragraphs are separated by a blank line ("\n\n"). */
   story: string;
+  /** Shown on the stop page only when present. */
+  oralHistory?: OralHistory;
 }
 export type MappedStop = Stop & { lat: number; lng: number };
 
 /** Trail order is the order of src/data/stops.json. */
 export const STOPS: Stop[] = stopsData;
+
+for (const s of STOPS) {
+  const o = s.oralHistory;
+  if (o && (!o.src?.trim() || !o.title?.trim() || !o.transcript?.trim()))
+    throw new Error(`Stop "${s.id}": an oralHistory entry needs a src, a title and a transcript.`);
+}
 
 /** The story split into paragraphs. */
 export const storyParagraphs = (s: Stop) => s.story.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
