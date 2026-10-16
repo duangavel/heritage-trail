@@ -38,3 +38,21 @@ document.querySelectorAll<HTMLElement>("[data-oral]").forEach((root) => {
   for (const ev of ["play", "pause", "timeupdate", "ended"]) audio.addEventListener(ev, sync);
   if (audio.readyState >= 1) setDuration();
 });
+
+/* YouTube: swap the play link for a privacy-enhanced embed only when the visitor asks for it. */
+document.querySelectorAll<HTMLElement>("[data-yt]").forEach((box) => {
+  const start = box.querySelector<HTMLAnchorElement>("[data-yt-start]")!;
+  start.addEventListener("click", (e) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(box.dataset.yt!)}?autoplay=1&rel=0`;
+    iframe.title = `Video: ${box.dataset.ytTitle}`;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    box.replaceChildren(iframe);
+    box.classList.add("playing");
+    iframe.focus();
+  });
+});

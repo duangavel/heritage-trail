@@ -8,7 +8,7 @@
 export const HIDE_FROM_SEARCH_ENGINES = true;
 
 /**
- * Where the "Donate to the trail" buttons go. Swap in the trail fund's own page
- * at the Community Foundation of the Ozarks when it's available.
+ * Where the "Donate to the Heritage Trail Fund" buttons go: the Springfield-Greene County
+ * African-American Heritage Trail Fund's donation page at the Community Foundation of the Ozarks.
  */
-export const DONATE_URL = "https://cfozarks.org";
+export const DONATE_URL = "https://cfozarks.fcsuite.com/erp/donate/create/fund?funit_id=2540";

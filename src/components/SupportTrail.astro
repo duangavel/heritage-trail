@@ -1,8 +1,35 @@
 ---
+/*
+ * The donation appeal. The link is DONATE_URL in src/config.ts; the places still to be
+ * marked are in src/data/next-markers.json. All text sits on the solid green panel (not on
+ * the photo), so contrast stays well above 4.5:1 in light and dark themes.
+ */
+import { Image } from "astro:assets";
 import { DONATE_URL } from "../config";
+import nextMarkers from "../data/next-markers.json";
+import { imageFor, photosFor, PHOTOGRAPHER } from "../lib/photos";
+
+const photo = photosFor("kentwood").events[0]?.photos[0];
 ---
 <section class="support" aria-labelledby="support-h">
-  <h2 id="support-h">Support the trail</h2>
-  <p>Donations to the Springfield-Greene County African American Heritage Trail are made through the Community Foundation of the Ozarks and help fund new markers.</p>
-  <a class="btn btn-primary" href={DONATE_URL} target="_blank" rel="noopener">Donate to the trail<span class="sr"> (opens the Community Foundation of the Ozarks website in a new tab)</span></a>
+  {photo && (
+    <figure class="support-photo">
+      <Image src={imageFor(photo)} alt={photo.alt} widths={[480, 800, 1200]} sizes="(min-width: 960px) 44rem, calc(100vw - 3rem)" />
+      <figcaption>{photo.caption} Photo by {PHOTOGRAPHER}</figcaption>
+    </figure>
+  )}
+  <div class="support-body">
+    <h2 id="support-h">Help mark the next chapter</h2>
+    <p>Every marker on the trail is funded by donations through the Community Foundation of the Ozarks' Springfield-Greene County African-American Heritage Trail Fund. Your gift helps place new markers, so more of Springfield's stories are told where they happened.</p>
+
+    <h3>Places waiting to be marked</h3>
+    <ul class="support-places">
+      {nextMarkers.map((m) => (
+        <li><strong>{m.name}</strong><span>{m.description}</span></li>
+      ))}
+    </ul>
+
+    <a class="btn btn-primary support-btn" href={DONATE_URL} target="_blank" rel="noopener" aria-describedby="donate-note">Donate to the Heritage Trail Fund</a>
+    <p class="support-note" id="donate-note">Opens the Community Foundation of the Ozarks' secure donation page in a new tab.</p>
+  </div>
 </section>

@@ -23,10 +23,13 @@ Stops are numbered in the order they appear in the file. Adding or removing an e
 
 - **Introduction** (home page, "About the trail"): [`src/data/intro.json`](src/data/intro.json). Currently a draft for Dr. Lyle Foster to revise; replace the `paragraphs` and remove `status` when final.
 - **Testimonials**: [`src/data/testimonials.json`](src/data/testimonials.json), a list of `{ "quote": "...", "name": "...", "role": "..." }` (`role` is optional). The home page section stays hidden while the list is empty.
-- **Oral histories**: put the audio file in `public/audio/` and add an `oralHistory` entry to the stop in `stops.json`:
-  `{ "src": "/audio/kentwood.mp3", "title": "...", "speaker": "...", "transcript": "..." }`. A transcript is required. Stops without one show no player.
+- **Oral histories**: add an `oralHistories` list to the stop in `stops.json`. Stops without one show no player. Each entry is either
+  - a YouTube video: `{ "type": "video", "youtubeId": "vv-3WNgwdMc", "title": "...", "speaker": "...", "summary": "...", "credit": "...", "pageUrl": "..." }`. A short summary is required (YouTube provides captions). Nothing loads from YouTube until the visitor taps play, and then it uses youtube-nocookie.com.
+  - an audio file in `public/audio/`: `{ "type": "audio", "src": "/audio/kentwood.mp3", "title": "...", "speaker": "...", "transcript": "...", "credit": "..." }`. A full transcript is required.
+- **Voices of the trail** (home page): [`src/data/voices.json`](src/data/voices.json), a list of oral histories in the same format, for interviews about the whole trail rather than one stop. The section stays hidden while the list is empty.
 - **Advisory Board**: [`src/data/board.json`](src/data/board.json).
 - **Donate link**: `DONATE_URL` in [`src/config.ts`](src/config.ts).
+- **Places still to be marked** (shown in the donation panel): [`src/data/next-markers.json`](src/data/next-markers.json).
 
 ## QR codes
 

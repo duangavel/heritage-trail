@@ -10,10 +10,16 @@ import emblem from "../assets/logo/trail-emblem.png";
 import SupportTrail from "../components/SupportTrail.astro";
 import Testimonials from "../components/Testimonials.astro";
 import intro from "../data/intro.json";
+import OralHistories from "../components/OralHistories.astro";
+import voicesData from "../data/voices.json";
+import { checkOralHistories, type OralHistory } from "../lib/trail";
 
 const ids = STOPS.map((s) => s.id);
 const count = capitalize(countWord(STOPS.length));
 const dedications = timeline();
+// Oral histories about the whole trail rather than one stop; the section is hidden while empty.
+const voices = voicesData as OralHistory[];
+checkOralHistories(voices, "src/data/voices.json");
 ---
 <Base title={TRAIL_NAME} description={`${count} markers across downtown and midtown Springfield, Missouri, tell the stories of the people and places that shaped Springfield and Greene County.`}>
   {/* Old-style QR links (/?stop=kentwood) go to the stop's own page. */}
@@ -89,15 +95,9 @@ const dedications = timeline();
     <p class="qr-url">Each code links to the stop's own page, for example <code>/stops/{STOPS[1].id}</code>.</p>
   </div>
 
-  <Testimonials />
+  {voices.length > 0 && <OralHistories items={voices} heading="Voices of the trail" idPrefix="voices" intro="Recollections of Springfield's African American community that reach across the whole trail." />}
 
-  <h2>Stories still to be marked</h2>
-  <p class="section-intro">The committee plans more markers. Among the places named for future recognition:</p>
-  <div class="coming">
-    <div><strong>Sherman Avenue Corridor</strong><span>The heart of Black residential and business life on the north side.</span></div>
-    <div><strong>Jones Alley Business District</strong><span>A downtown district of Black-owned businesses that no longer stands.</span></div>
-    <div><strong>Happy Hollow</strong><span>A Black neighborhood on the north side of Sherman Avenue.</span></div>
-  </div>
+  <Testimonials />
 
   <SupportTrail />
 
@@ -113,11 +113,13 @@ const dedications = timeline();
       {STOPS.map((s) => {
         const { lead, events } = photosFor(s.id);
         const gallery = events.find((e) => e.photos.length);
-        return (lead || gallery || s.oralHistory) && (
+        const orals = s.oralHistories ?? [];
+        const verb = orals.every((o) => o.type === "video") ? "Watch" : orals.every((o) => o.type === "audio") ? "Listen to" : "Watch and listen to";
+        return (lead || gallery || orals.length > 0) && (
           <div data-photos-for={s.id} hidden>
             {lead && <LeadPhoto photo={lead} />}
             {gallery && <p class="sheet-gallery-link"><a href={`${stopUrl(s.id)}#${gallery.id}-h`}>See {gallery.title.toLowerCase()} photos →</a></p>}
-            {s.oralHistory && <p class="sheet-gallery-link"><a href={`${stopUrl(s.id)}#oral-h`}>Listen to the oral history →</a></p>}
+            {orals.length > 0 && <p class="sheet-gallery-link"><a href={`${stopUrl(s.id)}#oral-h`}>{verb} {orals.length > 1 ? "the oral histories" : "the oral history"} →</a></p>}
           </div>
         );
       })}

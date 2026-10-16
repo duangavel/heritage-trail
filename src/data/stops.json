@@ -88,7 +88,27 @@
     "lat": 37.2178,
     "lng": -93.2788,
     "teaser": "Springfield's high school for Black students until desegregation.",
-    "story": "Until desegregation in 1955, this was Lincoln School, where Springfield's Black students went to high school. Its teachers anchored the neighborhood well beyond the classroom; one of them, Gerald Brooks, helped start the Park Day tradition at Silver Springs. The building lives on today as Ozarks Technical Community College's Lincoln Hall."
+    "story": "Until desegregation in 1955, this was Lincoln School, where Springfield's Black students went to high school. Its teachers anchored the neighborhood well beyond the classroom; one of them, Gerald Brooks, helped start the Park Day tradition at Silver Springs. The building lives on today as Ozarks Technical Community College's Lincoln Hall.",
+    "oralHistories": [
+      {
+        "type": "video",
+        "youtubeId": "vv-3WNgwdMc",
+        "title": "Richard's Story",
+        "speaker": "Richard Lewis",
+        "summary": "Richard “Bucky” Lewis was born on the corner of Sherman and Central. He was taught at Lincoln High School by teachers including Adah Fulbright, and was one of three high school seniors to integrate Central High School.",
+        "credit": "From The Journey Continues, Missouri State University",
+        "pageUrl": "https://www.missouristate.edu/SAG/JourneyContinues/richard-lewis.htm"
+      },
+      {
+        "type": "video",
+        "youtubeId": "-SV4_P0oqvc",
+        "title": "Norma's Story",
+        "speaker": "Norma Duncan",
+        "summary": "Norma Duncan grew up in Springfield and can recall its history in extraordinary detail, a gift she credits to her mother, an English teacher at Lincoln. She remembers how segregation shaped daily life, including a bus ride from Joplin when the driver ordered her to give up her seat to a white woman, and a white classmate from Central High School stood with her the rest of the way.",
+        "credit": "From The Journey Continues, Missouri State University",
+        "pageUrl": "https://www.missouristate.edu/SAG/JourneyContinues/norma-duncan.htm"
+      }
+    ]
   },
   {
     "id": "silver",

@@ -1,0 +1,78 @@
+---
+/*
+ * Oral histories: a stop's "oralHistories" list in src/data/stops.json, or the home page's
+ * "Voices of the trail" list in src/data/voices.json.
+ * Audio: without JavaScript the browser's own controls show; src/scripts/oral.ts swaps in larger,
+ * labeled play/pause and seek controls. The full transcript is always on the page.
+ * Video: nothing from YouTube loads until the visitor taps play; then oral.ts swaps in a
+ * youtube-nocookie.com player. Without JavaScript, the play link opens the video on YouTube.
+ */
+import type { OralHistory } from "../lib/trail";
+
+interface Props {
+  items: OralHistory[];
+  /** Section heading; defaults to "Oral history" / "Oral histories". */
+  heading?: string;
+  /** Unique id prefix, so two sections can share a page. */
+  idPrefix?: string;
+  intro?: string;
+}
+const { items, heading, idPrefix = "oral", intro } = Astro.props;
+const paras = (t: string) => t.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+const watchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`;
+const firstName = (name?: string) => (name ? `${name.split(" ")[0]}'s` : "the");
+---
+<section class="oral" aria-labelledby={`${idPrefix}-h`}>
+  <h2 id={`${idPrefix}-h`}>{heading ?? (items.length > 1 ? "Oral histories" : "Oral history")}</h2>
+  {intro && <p class="oral-intro">{intro}</p>}
+  {items.map((o, k) => (
+    <article class="oral-item" aria-labelledby={`${idPrefix}-${k}-title`}>
+      <h3 class="oral-title" id={`${idPrefix}-${k}-title`}>{o.title}</h3>
+      {o.speaker && <p class="oral-speaker">{o.speaker}</p>}
+
+      {o.type === "video" ? (
+        <Fragment>
+          <div class="oral-video" data-yt={o.youtubeId} data-yt-title={`${o.title}, ${o.speaker}`}>
+            <a class="oral-video-start" href={watchUrl(o.youtubeId)} target="_blank" rel="noopener" data-yt-start>
+              <span class="oral-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+              <span class="oral-video-label">Play video<span class="sr">: {o.title}.</span></span>
+              <span class="oral-video-note">Loads from YouTube when you tap play</span>
+            </a>
+          </div>
+          <p class="oral-summary">{o.summary}</p>
+          <p class="oral-links">
+            <a href={watchUrl(o.youtubeId)} target="_blank" rel="noopener">Watch on YouTube<span class="sr"> (opens in a new tab)</span></a>
+            {o.pageUrl && <a href={o.pageUrl} target="_blank" rel="noopener">Read {firstName(o.speaker)} story<span class="sr"> (opens in a new tab)</span></a>}
+          </p>
+        </Fragment>
+      ) : (
+        <div data-oral>
+          <audio src={o.src} preload="metadata" controls data-oral-audio>
+            <a href={o.src}>Download the recording</a>
+          </audio>
+          <div class="oral-player" data-oral-player hidden>
+            <button class="oral-play" type="button" data-oral-toggle aria-label="Play recording">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-play"><path d="M8 5v14l11-7z" /></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z" /></svg>
+            </button>
+            <div class="oral-track">
+              <input type="range" min="0" max="0" step="1" value="0" data-oral-seek aria-label="Position in recording" />
+              <p class="oral-time"><span data-oral-current>0:00</span> / <span data-oral-duration>–:––</span></p>
+            </div>
+          </div>
+          <details class="oral-transcript">
+            <summary>Read the transcript</summary>
+            <div>{paras(o.transcript).map((p) => <p>{p}</p>)}</div>
+          </details>
+          {o.pageUrl && <p class="oral-links"><a href={o.pageUrl} target="_blank" rel="noopener">More about this recording<span class="sr"> (opens in a new tab)</span></a></p>}
+        </div>
+      )}
+
+      {o.credit && <p class="oral-credit">{o.credit}</p>}
+    </article>
+  ))}
+</section>
+
+<script>
+  import "../scripts/oral.ts";
+</script>
