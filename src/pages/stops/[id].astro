@@ -8,6 +8,8 @@ import PhotoViewer from "../../components/PhotoViewer.astro";
 import OralHistories from "../../components/OralHistories.astro";
 import { STOPS, TRAIL_NAME, stopUrl, directionsUrl, storyParagraphs, type Stop } from "../../lib/trail";
 import { photosFor } from "../../lib/photos";
+import InTheNews from "../../components/InTheNews.astro";
+import { pressFor } from "../../lib/press";
 
 export function getStaticPaths() {
   return STOPS.map((stop, index) => ({ params: { id: stop.id }, props: { stop, index } }));
@@ -43,6 +45,8 @@ const galleries = events.filter((e) => e.photos.length);
     {galleries.map((e) => <Gallery event={e} />)}
 
     {s.oralHistories?.length ? <OralHistories items={s.oralHistories} /> : null}
+
+    <InTheNews items={pressFor(s.id)} compact />
 
     <nav class="stop-nav" aria-label="Other stops">
       {prev && <a href={stopUrl(prev.id)}><small>← Stop {i}</small><strong>{prev.name}</strong></a>}

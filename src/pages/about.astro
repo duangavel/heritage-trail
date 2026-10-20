@@ -5,6 +5,8 @@ import SupportTrail from "../components/SupportTrail.astro";
 import board from "../data/board.json";
 import { TRAIL_NAME } from "../lib/trail";
 import { PHOTOGRAPHER } from "../lib/photos";
+import InTheNews from "../components/InTheNews.astro";
+import { allPress } from "../lib/press";
 ---
 <Base title={`About the Trail · ${TRAIL_NAME}`} description="The people and partners behind the Springfield-Greene County African American Heritage Trail.">
   <article class="about">
@@ -24,6 +26,8 @@ import { PHOTOGRAPHER } from "../lib/photos";
         ))}
       </ol>
     </section>
+
+    <InTheNews items={allPress()} />
 
     <section aria-labelledby="credits-h">
       <h2 id="credits-h">Website</h2>

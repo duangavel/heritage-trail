@@ -1,0 +1,36 @@
+---
+/* "In the news": a list of press items from src/data/press.json. Renders nothing when the list is empty. */
+import { pressDate, type PressItem } from "../lib/press";
+
+interface Props {
+  items: PressItem[];
+  /** Smaller variant for stop pages. */
+  compact?: boolean;
+}
+const { items, compact = false } = Astro.props;
+---
+{items.length > 0 && (
+  <section class:list={["news", { "news-compact": compact }]} aria-labelledby="news-h">
+    <h2 id="news-h">In the news</h2>
+    <ul class="news-list">
+      {items.map((p) => (
+        <li>
+          <p class="news-meta">
+            <span class="news-outlet">{p.outlet}</span>
+            {pressDate(p) && <span class="news-date">{p.date && !p.dateLabel ? <time datetime={p.date}>{pressDate(p)}</time> : pressDate(p)}</span>}
+          </p>
+          {p.links?.length ? (
+            <Fragment>
+              <p class="news-headline news-headline-text">{p.headline}</p>
+              <p class="news-links">
+                {p.links.map((l) => <a href={l.url} target="_blank" rel="noopener">{l.label}<span class="sr">: {p.headline} (opens in a new tab)</span></a>)}
+              </p>
+            </Fragment>
+          ) : (
+            <a class="news-headline" href={p.url} target="_blank" rel="noopener">{p.headline}<span class="sr"> (opens in a new tab)</span></a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

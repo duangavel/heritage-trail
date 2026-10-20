@@ -1,0 +1,165 @@
+[
+  {
+    "outlet": "KY3",
+    "headline": "Route 66 100-Year Ride: 3 markers on Springfield’s African-American Heritage Trail related to Route 66",
+    "date": "2026-04-28",
+    "url": "https://www.ky3.com/2026/04/29/route-66-100-year-ride-3-markers-springfields-african-american-heritage-trail-related-route-66/",
+    "stops": [
+      "kentwood",
+      "alberta",
+      "grahams"
+    ],
+    "links": [
+      {
+        "label": "Read the article",
+        "url": "https://www.ky3.com/2026/04/29/route-66-100-year-ride-3-markers-springfields-african-american-heritage-trail-related-route-66/"
+      },
+      {
+        "label": "Watch the video",
+        "url": "https://www.youtube.com/watch?v=BkqqhjBMKRE"
+      }
+    ]
+  },
+  {
+    "outlet": "Springfield Daily Citizen",
+    "headline": "Springfield-Greene County African-American Heritage Trail adds marker for historic Kentwood Hall",
+    "date": "2026-02-18",
+    "url": "https://sgfcitizen.org/government/springfield-greene-county/kentwood-hall-african-american-heritage/",
+    "stops": [
+      "kentwood"
+    ]
+  },
+  {
+    "outlet": "Missouri State University News",
+    "headline": "Preserving legacy through the African American Heritage Trail",
+    "date": "2025-02-04",
+    "url": "https://news.missouristate.edu/2025/02/04/preserving-legacy-through-the-african-american-heritage-trail/",
+    "stops": [
+      "walls"
+    ]
+  },
+  {
+    "outlet": "Springfield News-Leader",
+    "headline": "Next markers on Springfield's African-American Heritage Trail mapped and ready",
+    "date": "2025-01-19",
+    "url": "https://www.news-leader.com/story/news/education/2025/01/19/springfield-african-american-heritage-trail-next-markers-identified/77746395007/",
+    "stops": [
+      "trail",
+      "churchnorth",
+      "sawyers",
+      "walls"
+    ]
+  },
+  {
+    "outlet": "KSMU Radio",
+    "headline": "Stories from the Springfield-Greene County African American Heritage Trail",
+    "date": "2021-12-13",
+    "dateLabel": "Series, December 13–17, 2021",
+    "url": "https://www.ksmu.org/stories-from-the-springfield-greene-county-african-american-heritage-trail",
+    "stops": [
+      "trail",
+      "lincoln",
+      "grahams",
+      "churchsouth",
+      "churchnorth",
+      "square",
+      "kentwood",
+      "bartley",
+      "alberta",
+      "cemetery",
+      "silver"
+    ],
+    "stopLinks": {
+      "lincoln": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-13/former-students-of-lincoln-school-recall-the-dedication-resilience-of-teachers",
+        "headline": "Former students of Lincoln School recall the dedication, resilience of their teachers",
+        "date": "2021-12-13"
+      },
+      "grahams": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-13/grahams-rib-station",
+        "headline": "Graham’s Rib Station & Cabins, legendary for providing a safe haven—and for its mouth-watering barbecue",
+        "date": "2021-12-13"
+      },
+      "churchsouth": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-14/in-early-springfield-a-quartet-of-black-churches-fostered-faith-community",
+        "headline": "In early Springfield, a quartet of Black churches fostered faith, community",
+        "date": "2021-12-14"
+      },
+      "churchnorth": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-14/in-early-springfield-a-quartet-of-black-churches-fostered-faith-community",
+        "headline": "In early Springfield, a quartet of Black churches fostered faith, community",
+        "date": "2021-12-14"
+      },
+      "square": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-14/lynching-of-3-young-black-men-on-park-central-square-in-1906-is-a-tragic-part-of-springfields-history",
+        "headline": "Lynching of 3 young Black men on Park Central Square in 1906 is a tragic part of Springfield's history",
+        "date": "2021-12-14"
+      },
+      "kentwood": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-15/in-the-kentwood-arms-hotel-a-story-of-the-twists-and-turns-of-one-springfield-businesss-path-to-desegregation",
+        "headline": "The Kentwood Arms Hotel reveals the twists and turns of one Springfield business’s path to desegregation",
+        "date": "2021-12-15"
+      },
+      "bartley": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-15/bartley-decatur-neighborhood-center-serves-people-of-color-in-springfield-for-over-a-century",
+        "headline": "In its second century, Bartley-Decatur Neighborhood Center continues its theme of serving, and honoring, diversity",
+        "date": "2021-12-15"
+      },
+      "alberta": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-16/albertas-hotel-providing-safety-comfort-to-springfields-black-travelers",
+        "headline": "Alberta’s Hotel: providing safety, comfort to Springfield's Black travelers",
+        "date": "2021-12-16"
+      },
+      "cemetery": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-16/on-lincoln-cemeterys-sacred-grounds-springfields-black-veterans-families-sought-dignity-in-burial",
+        "headline": "On Lincoln Cemetery's sacred grounds, Springfield's Black veterans, families found dignity in burial",
+        "date": "2021-12-17"
+      },
+      "silver": {
+        "url": "https://www.ksmu.org/show/sense-of-community/2021-12-17/in-silver-springs-park-broader-springfield-can-learn-from-the-shared-human-experiences-of-joy-hope",
+        "headline": "In Silver Springs Park, broader Springfield can learn from the shared 'human experiences' of joy, friends and hope",
+        "date": "2021-12-17"
+      }
+    }
+  },
+  {
+    "outlet": "Ozarks First (video)",
+    "headline": "Visit the African-American Heritage Trail to learn about Springfield's History",
+    "date": "2021-01-18",
+    "url": "https://www.youtube.com/watch?v=UxVtORSvcOQ",
+    "stops": [
+      "trail"
+    ]
+  },
+  {
+    "outlet": "Springfield, MO Convention & Visitors Bureau",
+    "headline": "At the Crossroads of History",
+    "date": "2019-11-15",
+    "url": "https://www.springfieldmo.org/blog/post/at-the-crossroads-of-history/",
+    "stops": [
+      "trail"
+    ]
+  },
+  {
+    "outlet": "City of Springfield",
+    "headline": "Springfield-Greene Co. African-American Heritage Trail Committee announces new round of markers",
+    "date": "2019-04-22",
+    "url": "https://www.springfieldmo.gov/m/newsflash/home/detail/6351",
+    "stops": [
+      "churchnorth",
+      "churchsouth",
+      "alberta",
+      "lincoln"
+    ]
+  },
+  {
+    "outlet": "City of Springfield (CityView)",
+    "headline": "Springfield-Greene County African-American Heritage Trail officially launched at Park Day 2018",
+    "date": "2018-08-07",
+    "url": "https://archivecityview.springfieldmo.gov/springfield-greene-county-african-american-heritage-trail-officially-launched-at-park-day-2018/",
+    "stops": [
+      "trail",
+      "silver"
+    ]
+  }
+]
