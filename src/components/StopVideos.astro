@@ -1,0 +1,24 @@
+---
+/* Videos about a stop (ceremonies, dedications), from the stop's "videos" list in src/data/stops.json. */
+import VideoEmbed from "./VideoEmbed.astro";
+import { PROVIDERS, type StopVideo } from "../lib/video";
+import { formatDate } from "../lib/trail";
+
+interface Props { items: StopVideo[] }
+const { items } = Astro.props;
+---
+<section class="oral stop-videos" aria-labelledby="videos-h">
+  <h2 id="videos-h">{items.length > 1 ? "Videos" : "Video"}</h2>
+  {items.map((v, k) => (
+    <article class="oral-item" aria-labelledby={`video-${k}-title`}>
+      <h3 class="oral-title" id={`video-${k}-title`}>{v.title}</h3>
+      {v.date && <p class="oral-speaker"><time datetime={v.date}>{formatDate(v.date)}</time></p>}
+      <VideoEmbed provider={v.provider} id={v.id} label={v.title} />
+      <p class="oral-summary">{v.summary}</p>
+      <p class="oral-links">
+        <a href={PROVIDERS[v.provider].watchUrl(v.id)} target="_blank" rel="noopener">Watch on {PROVIDERS[v.provider].name}<span class="sr"> (opens in a new tab)</span></a>
+      </p>
+      {v.credit && <p class="oral-credit">Video: {v.credit}</p>}
+    </article>
+  ))}
+</section>

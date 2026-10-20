@@ -39,16 +39,21 @@ document.querySelectorAll<HTMLElement>("[data-oral]").forEach((root) => {
   if (audio.readyState >= 1) setDuration();
 });
 
-/* YouTube: swap the play link for a privacy-enhanced embed only when the visitor asks for it. */
-document.querySelectorAll<HTMLElement>("[data-yt]").forEach((box) => {
-  const start = box.querySelector<HTMLAnchorElement>("[data-yt-start]")!;
+/*
+ * Videos (YouTube or Vimeo): swap the play link for the privacy-friendly player only when the
+ * visitor asks for it. The player address is built at build time (src/lib/video.ts).
+ */
+document.querySelectorAll<HTMLElement>("[data-video]").forEach((box) => {
+  if (box.dataset.ready) return; // a page can include this script more than once
+  box.dataset.ready = "1";
+  const start = box.querySelector<HTMLAnchorElement>("[data-video-start]")!;
   start.addEventListener("click", (e) => {
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     const iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(box.dataset.yt!)}?autoplay=1&rel=0`;
-    iframe.title = `Video: ${box.dataset.ytTitle}`;
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.src = box.dataset.video!;
+    iframe.title = `Video: ${box.dataset.videoTitle}`;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share";
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = "strict-origin-when-cross-origin";
     box.replaceChildren(iframe);

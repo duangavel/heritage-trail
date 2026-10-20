@@ -153,6 +153,54 @@
     ]
   },
   {
+    "outlet": "KBIA",
+    "headline": "Alberta's Hotel: A Springfield Green Book Destination",
+    "date": "2019-04-04",
+    "url": "https://www.kbia.org/2019-04-04/albertas-hotel-a-springfield-green-book-destination",
+    "stops": [
+      "alberta"
+    ]
+  },
+  {
+    "outlet": "Springfield Business Journal",
+    "headline": "Trail to the Past: African-American heritage markers recall significant moments in city’s history",
+    "date": "2019-01-07",
+    "url": "https://sbj.net/stories/trail-to-the-past-african-american-heritage-markers-recall-significant-moments-in-citys-history,62000",
+    "stops": [
+      "trail"
+    ]
+  },
+  {
+    "outlet": "Missourinet",
+    "headline": "African American Historical sights being recognized in southwest Missouri’s Springfield",
+    "date": "2018-12-25",
+    "url": "https://www.missourinet.com/2018/12/25/african-american-historical-sights-being-recognized-in-southwest-missouris-springfield/",
+    "stops": [
+      "trail",
+      "silver",
+      "lincoln"
+    ]
+  },
+  {
+    "outlet": "Springfield Business Journal",
+    "headline": "First marker for African-American Heritage Trail installed",
+    "date": "2018-12-13",
+    "url": "https://sbj.net/stories/first-marker-for-african-american-heritage-trail-installed,61704",
+    "stops": [
+      "trail",
+      "silver"
+    ]
+  },
+  {
+    "outlet": "Ozark Greenways",
+    "headline": "African American Heritage Trail Forming in Springfield",
+    "date": "2018-10-18",
+    "url": "https://ozarkgreenways.org/news/african-american-heritage-trail-forming-in-springfield/",
+    "stops": [
+      "trail"
+    ]
+  },
+  {
     "outlet": "City of Springfield (CityView)",
     "headline": "Springfield-Greene County African-American Heritage Trail officially launched at Park Day 2018",
     "date": "2018-08-07",
@@ -160,6 +208,15 @@
     "stops": [
       "trail",
       "silver"
+    ]
+  },
+  {
+    "outlet": "KSMU Radio",
+    "headline": "Trail Marking Significant African American Heritage Sites in Springfield is in the Works",
+    "date": "2018-08-03",
+    "url": "https://www.ksmu.org/news/2018-08-03/trail-marking-significant-african-american-heritage-sites-in-springfield-is-in-the-works",
+    "stops": [
+      "trail"
     ]
   }
 ]

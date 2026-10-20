@@ -323,3 +323,23 @@ footer .credit a{font:inherit; font-family:var(--body); font-size:.9rem; font-we
 .news-compact .news-headline{font-size:1rem}
 .news-headline-text{margin:0; color:var(--ink)}
 .news-links{display:flex; flex-wrap:wrap; gap:.25rem 1.25rem; margin:.35rem 0 0; font-weight:700; font-size:.95rem}
+
+/* extra stop sections (e.g. the back of a marker) */
+.stop-section{margin-top:3rem; padding-top:1.75rem; border-top:3px double var(--line)}
+.stop-section h2{margin:0 0 1rem}
+.stop-section-kicker{margin:0 0 .35rem; font:700 .8rem/1.3 var(--body); letter-spacing:.12em; text-transform:uppercase; color:var(--brick)}
+:root[data-theme="dark"] .stop-section-kicker{color:var(--brass-soft)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .stop-section-kicker{color:var(--brass-soft)} }
+.stop-section .sheet-story{margin-bottom:0}
+
+/* about: mission and partners */
+.mission{margin-top:2.5rem; padding:1.4rem 1.5rem; background:var(--paper); border-radius:14px}
+.mission h2{margin:0 0 .6rem}
+.mission p{margin:0 0 .9rem; font:400 1.12rem/1.65 var(--display); max-width:36em}
+.mission .mission-award{margin:0; font:600 1rem/1.5 var(--body); color:var(--ink); padding-left:.9rem; border-left:4px solid var(--brass)}
+.partners{margin-top:3rem}
+.partners h2{margin:0 0 1rem}
+.partner-list{list-style:none; margin:0 0 1rem; padding:0; display:grid; grid-template-columns:1fr; gap:.1rem 1.5rem}
+@media (min-width:600px){ .partner-list{grid-template-columns:1fr 1fr} }
+.partner-list li{padding:.55rem 0; border-bottom:1px solid var(--line)}
+.partner-list a{font:600 1.02rem/1.4 var(--display); text-underline-offset:3px}

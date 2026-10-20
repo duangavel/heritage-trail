@@ -4,10 +4,11 @@
  * "Voices of the trail" list in src/data/voices.json.
  * Audio: without JavaScript the browser's own controls show; src/scripts/oral.ts swaps in larger,
  * labeled play/pause and seek controls. The full transcript is always on the page.
- * Video: nothing from YouTube loads until the visitor taps play; then oral.ts swaps in a
- * youtube-nocookie.com player. Without JavaScript, the play link opens the video on YouTube.
+ * Video (YouTube or Vimeo): see VideoEmbed.astro; nothing loads from the host until the visitor taps play.
  */
-import type { OralHistory } from "../lib/trail";
+import { oralVideo, type OralHistory } from "../lib/trail";
+import { PROVIDERS } from "../lib/video";
+import VideoEmbed from "./VideoEmbed.astro";
 
 interface Props {
   items: OralHistory[];
@@ -19,7 +20,6 @@ interface Props {
 }
 const { items, heading, idPrefix = "oral", intro } = Astro.props;
 const paras = (t: string) => t.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
-const watchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`;
 const firstName = (name?: string) => (name ? `${name.split(" ")[0]}'s` : "the");
 ---
 <section class="oral" aria-labelledby={`${idPrefix}-h`}>
@@ -32,16 +32,10 @@ const firstName = (name?: string) => (name ? `${name.split(" ")[0]}'s` : "the");
 
       {o.type === "video" ? (
         <Fragment>
-          <div class="oral-video" data-yt={o.youtubeId} data-yt-title={`${o.title}, ${o.speaker}`}>
-            <a class="oral-video-start" href={watchUrl(o.youtubeId)} target="_blank" rel="noopener" data-yt-start>
-              <span class="oral-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
-              <span class="oral-video-label">Play video<span class="sr">: {o.title}.</span></span>
-              <span class="oral-video-note">Loads from YouTube when you tap play</span>
-            </a>
-          </div>
+          <VideoEmbed provider={oralVideo(o).provider} id={oralVideo(o).id} label={`${o.title}, ${o.speaker}`} />
           <p class="oral-summary">{o.summary}</p>
           <p class="oral-links">
-            <a href={watchUrl(o.youtubeId)} target="_blank" rel="noopener">Watch on YouTube<span class="sr"> (opens in a new tab)</span></a>
+            <a href={PROVIDERS[oralVideo(o).provider].watchUrl(oralVideo(o).id)} target="_blank" rel="noopener">Watch on {PROVIDERS[oralVideo(o).provider].name}<span class="sr"> (opens in a new tab)</span></a>
             {o.pageUrl && <a href={o.pageUrl} target="_blank" rel="noopener">Read {firstName(o.speaker)} story<span class="sr"> (opens in a new tab)</span></a>}
           </p>
         </Fragment>

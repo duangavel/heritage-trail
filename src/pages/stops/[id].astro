@@ -6,7 +6,8 @@ import LeadPhoto from "../../components/LeadPhoto.astro";
 import Gallery from "../../components/Gallery.astro";
 import PhotoViewer from "../../components/PhotoViewer.astro";
 import OralHistories from "../../components/OralHistories.astro";
-import { STOPS, TRAIL_NAME, stopUrl, directionsUrl, storyParagraphs, type Stop } from "../../lib/trail";
+import StopVideos from "../../components/StopVideos.astro";
+import { STOPS, TRAIL_NAME, stopUrl, directionsUrl, storyParagraphs, paragraphs, type Stop } from "../../lib/trail";
 import { photosFor } from "../../lib/photos";
 import InTheNews from "../../components/InTheNews.astro";
 import { pressFor } from "../../lib/press";
@@ -42,7 +43,17 @@ const galleries = events.filter((e) => e.photos.length);
     </PhotoTool>
     <p class="passport" aria-live="polite" data-passport>Your trail passport fills in as you visit stops.</p>
 
+    {(s.sections ?? []).map((sec, k) => (
+      <section class="stop-section" aria-labelledby={`section-${k}-h`}>
+        {sec.kicker && <p class="stop-section-kicker">{sec.kicker}</p>}
+        <h2 id={`section-${k}-h`}>{sec.title}</h2>
+        <div class="sheet-story">{paragraphs(sec.text).map((p) => <p>{p}</p>)}</div>
+      </section>
+    ))}
+
     {galleries.map((e) => <Gallery event={e} />)}
+
+    {s.videos?.length ? <StopVideos items={s.videos} /> : null}
 
     {s.oralHistories?.length ? <OralHistories items={s.oralHistories} /> : null}
 

@@ -5,8 +5,21 @@ interface Props { activeId?: string }
 const { activeId } = Astro.props;
 
 // Stops without a confirmed location are listed on the site but left off the map.
-const pins = STOPS.map((s, i) => ({ s, i })).filter(({ s }) => isMapped(s));
-const route = STOPS.filter(isMapped).map((s, i) => `${i ? "L" : "M"}${px(s.lng).toFixed(1)} ${py(s.lat).toFixed(1)}`).join(" ");
+// Pins closer than MIN_GAP are nudged apart for display only (the map is a guide, not to scale);
+// "Get directions" always uses the real coordinates.
+const MIN_GAP = 30;
+const pins = STOPS.map((s, i) => ({ s, i })).filter(({ s }) => isMapped(s)).map(({ s, i }) => ({ s, i, x: px(s.lng!), y: py(s.lat!) }));
+for (let pass = 0; pass < 20; pass++) {
+  for (const a of pins) for (const b of pins) {
+    if (a === b) continue;
+    const dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) || 0.01;
+    if (d >= MIN_GAP) continue;
+    const push = (MIN_GAP - d) / 2;
+    a.x -= (dx / d) * push; a.y -= (dy / d) * push;
+    b.x += (dx / d) * push; b.y += (dy / d) * push;
+  }
+}
+const route = pins.map((p, k) => `${k ? "L" : "M"}${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(" ");
 const cy = py(37.2108); // Jordan Creek
 const creek = `M0 ${cy + 18} C ${W * 0.2} ${cy - 10}, ${W * 0.35} ${cy + 26}, ${W * 0.55} ${cy + 4} S ${W * 0.85} ${cy - 14}, ${W} ${cy + 8}`;
 ---
@@ -14,14 +27,14 @@ const creek = `M0 ${cy + 18} C ${W * 0.2} ${cy - 10}, ${W * 0.35} ${cy + 26}, ${
   {Array.from({ length: 8 }, (_, k) => <line x1="0" y1={((k + 1) * H) / 9} x2={W} y2={((k + 1) * H) / 9} class="m-street" />)}
   {Array.from({ length: 4 }, (_, k) => <line x1={((k + 1) * W) / 5} y1="0" x2={((k + 1) * W) / 5} y2={H} class="m-street" />)}
   <path d={creek} class="m-creek" />
-  <text x={W - 12} y={cy - 8} class="m-label" text-anchor="end">Jordan Creek</text>
+  <text x={W * 0.62} y={cy + 34} class="m-label" text-anchor="middle">Jordan Creek</text>
   <text x={px(-93.2810)} y={py(37.1993) + 38} class="m-label" text-anchor="middle">Missouri State</text>
   <path d={route} class="m-route draw" />
   <g transform={`translate(${W - 28},34)`}>
     <path d="M0 -16 L6 4 L0 0 L-6 4 Z" fill="#E7D49A" />
     <text y="18" class="m-label" text-anchor="middle">N</text>
   </g>
-  {pins.map(({ s, i }) => isMapped(s) && (
+  {pins.map(({ s, i, x, y }) => (
     <a
       href={stopUrl(s.id)}
       class:list={["m-pin", { active: s.id === activeId }]}
@@ -29,7 +42,7 @@ const creek = `M0 ${cy + 18} C ${W * 0.2} ${cy - 10}, ${W * 0.35} ${cy + 26}, ${
       aria-label={`Stop ${i + 1}: ${s.name}`}
       aria-current={s.id === activeId ? "page" : undefined}
     >
-      <g transform={`translate(${px(s.lng).toFixed(1)},${py(s.lat).toFixed(1)})`}>
+      <g transform={`translate(${x.toFixed(1)},${y.toFixed(1)})`}>
         <circle r="20" class="halo" />
         <circle r="14" class="dot" />
         <text class="num">{i + 1}</text>

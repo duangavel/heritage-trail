@@ -1,0 +1,13 @@
+[
+  { "name": "City of Springfield", "url": "https://www.springfieldmo.gov/" },
+  { "name": "Springfield-Greene County Park Board", "url": "https://parkboard.org/" },
+  { "name": "Missouri State University", "url": "https://www.missouristate.edu/" },
+  { "name": "Drury University", "url": "https://www.drury.edu/" },
+  { "name": "Ozarks Technical Community College (OTC)", "url": "https://ozarkstech.edu/" },
+  { "name": "Ozark Greenways", "url": "https://ozarkgreenways.org/" },
+  { "name": "Community Foundation of the Ozarks", "url": "https://www.cfozarks.org/" },
+  { "name": "City Utilities", "url": "https://www.cityutilities.net/" },
+  { "name": "Bass Pro Shops", "url": "https://www.basspro.com/" },
+  { "name": "Equal Justice Initiative", "url": "https://eji.org/" },
+  { "name": "History Museum on the Square", "url": "https://historymuseumonthesquare.org/" }
+]

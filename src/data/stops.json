@@ -27,7 +27,25 @@
     "lat": 37.2089,
     "lng": -93.2923,
     "teaser": "Where the 1906 Easter lynchings took place.",
-    "story": "On Good Friday, April 13, 1906, Springfield and Greene County had a thriving population of African American professionals, business owners and community leaders. By the early hours of Easter Sunday, a false allegation that two Black men, Horace B. Duncan and Fred Coker, had assaulted a white woman had turned into a lynch mob. The two men had been taken to the city jail for their protection, where a third young Black man, William Allen, was already being held. The mob broke into the jail, took Mr. Duncan and Mr. Coker to the city square and hanged them from the Gottfried Tower, an iron structure topped with a replica of the Statue of Liberty. Then it returned to the jail for Mr. Allen and lynched him too. A crowd of thousands watched.\n\nFearing further violence, many African Americans left the city, some never to return. A grand jury indicted eighteen men who were involved. One man was brought to trial, but no one was ever convicted of these murders."
+    "story": "On Good Friday, April 13, 1906, Springfield and Greene County had a thriving population of African American professionals, business owners and community leaders. By the early hours of Easter Sunday, a false allegation that two Black men, Horace B. Duncan and Fred Coker, had assaulted a white woman had turned into a lynch mob. The two men had been taken to the city jail for their protection, where a third young Black man, William Allen, was already being held. The mob broke into the jail, took Mr. Duncan and Mr. Coker to the city square and hanged them from the Gottfried Tower, an iron structure topped with a replica of the Statue of Liberty. Then it returned to the jail for Mr. Allen and lynched him too. A crowd of thousands watched.\n\nFearing further violence, many African Americans left the city, some never to return. A grand jury indicted eighteen men who were involved. One man was brought to trial, but no one was ever convicted of these murders.",
+    "sections": [
+      {
+        "title": "Lynching in America",
+        "kicker": "Marker, side B · Equal Justice Initiative, 2019",
+        "text": "Thousands of black people were the victims of lynching in the United States between 1877 and 1950. The lynching of African Americans during this era was a form of racial terrorism intended to intimidate black people and enforce racial hierarchy and segregation. After the Civil War, violent resistance to equal rights for African Americans led to fatal violence against black women, men, and children accused of violating social customs, engaging in interracial relationships, or committing crimes. Community leaders who spoke against this violence were themselves often targeted by mobs.\n\nRacial lynching became the most public and notorious form of subordination directed at black people and was frequently tolerated or even supported by law enforcement and elected officials. White mobs were usually permitted to engage in brutal violence with impunity. Many black people were pulled out of jails or given over to mobs by law enforcement officials who were legally required to protect them. Lynchings often included burnings and mutilation, sometimes in front of crowds numbering in the thousands. Many of the victims of these acts of violence were not recorded by name and remain unknown, but over 50 lynchings have been documented in Missouri alone, with at least three having taken place in Greene County.",
+        "status": "Transcribed from the old trail website; not yet checked against the marker (no photo of side B)."
+      }
+    ],
+    "videos": [
+      {
+        "provider": "vimeo",
+        "id": "460197558",
+        "title": "Community Remembrance Coalition Soil Collection Ceremony",
+        "summary": "Members of Springfield's Community Remembrance Coalition, the Springfield NAACP and representatives of the Black Archives of Mid-America in Kansas City collect and archive soil from the site on Park Central Square where Horace Duncan, Fred Coker and Will Allen were lynched in 1906.",
+        "date": "2020-09-21",
+        "credit": "SGF CityView, City of Springfield"
+      }
+    ]
   },
   {
     "id": "sawyers",
@@ -58,7 +76,7 @@
     "lat": 37.2133,
     "lng": -93.2852,
     "teaser": "Gibson Chapel Presbyterian and Pitts Chapel United Methodist, both founded in 1865.",
-    "story": "Two of Springfield's oldest Black congregations stand here. Gibson Chapel Presbyterian began in 1865 as the First Negro Cumberland Presbyterian Church, founded by Rev. Peter Lair (later Lear), a formerly enslaved man; its brick church went up in 1891. Pitts Chapel United Methodist also dates to 1865, rebuilt after an arsonist burned its log church on Jordan Creek. Land donated by Fleming McCullah gave it a new home that also housed the Freedmen's Bureau school and, later, the public school for Black children. The congregation built its present church in 1911."
+    "story": "Two of Springfield's oldest Black congregations stand here. Gibson Chapel Presbyterian began in 1865 as the First Negro Cumberland Presbyterian Church, founded by Rev. Peter Lair (later Lear), a formerly enslaved man.\n\nIn 1891, a new brick church was built on the corner of Washington Avenue and Pine (now 536 E. Tampa Street). The church was renamed Gibson Chapel after the death of Reverend H. A. Gibson, who worked tirelessly to get the new structure erected. After the lynching of three innocent black men on the public square on Easter weekend, 1906, many families sought shelter in the chapel's basement while male church members guarded the building. The building was heavily damaged by fires in 1915 and 1935, but was rebuilt both times. After World War II, five members of the choir formed the singing group the Philharmonics. The group went on to regional and national fame.\n\nPitts Chapel United Methodist also dates to 1865, rebuilt after an arsonist burned its log church on Jordan Creek. Land donated by Fleming McCullah gave it a new home that also housed the Freedmen's Bureau school and, later, the public school for Black children. The congregation built its present church in 1911."
   },
   {
     "id": "churchnorth",
@@ -118,17 +136,27 @@
     "lat": 37.2262,
     "lng": -93.2838,
     "teaser": "The only public park designated for Black residents during segregation.",
-    "story": "Established in 1918 on land known as the Fairbanks Pasture, Silver Springs was the city's only public park designated for Black residents during segregation.\n\nThe land was originally owned by Jonathan Fairbanks, superintendent of Springfield Public Schools in the early 1900s. On Easter Eve, 1906, Fairbanks opened his home as a safe place for Black residents who were frightened by an unruly mob that had lynched three Black men on the town square.\n\nThe park was also home to various sports leagues, including semi-pro baseball. In the 1930s, the WPA built fieldstone retaining walls and the first Silver Springs Pool, and lined the creek channel with rock.\n\nIn 1952, park supervisors Gerald Brooks, also a Lincoln School teacher, and Robert Wendell Duncan started a day of games and sports for young people here. It grew into the annual Park Day Reunion, which still brings families home on the first weekend in August, celebrated with a parade, beauty pageant, concerts and a barbeque picnic. The trail's first marker was unveiled here in 2018, the park's centennial."
+    "story": "Established in 1918 on land known as the Fairbanks Pasture, Silver Springs was the city's only public park designated for Black residents during segregation.\n\nThe land was originally owned by Jonathan Fairbanks, superintendent of Springfield Public Schools in the early 1900s. On Easter Eve, 1906, Fairbanks opened his home as a safe place for Black residents who were frightened by an unruly mob that had lynched three Black men on the town square.\n\nThe park was also home to various sports leagues, including semi-pro baseball. In the 1930s, the WPA built fieldstone retaining walls and the first Silver Springs Pool, and lined the creek channel with rock.\n\nIn 1952, park supervisors Gerald Brooks, also a Lincoln School teacher, and Robert Wendell Duncan started a day of games and sports for young people here. It grew into the annual Park Day Reunion, which still brings families home on the first weekend in August, celebrated with a parade, beauty pageant, concerts and a barbeque picnic. Park Day provided the backdrop for the 1998 film Park Day, by director Sterling Macer Jr., who grew up here. The trail's first marker was unveiled here in 2018, the park's centennial.\n\n“One of the goals of the whole project is to promote healing and appreciation for the African American community's past and present,” said Springfield Mayor Ken McClure in his 2018 State of the City address. “… We are making great strides forward in diversity and inclusion but we have a long ways to go.”",
+    "videos": [
+      {
+        "provider": "vimeo",
+        "id": "283563697",
+        "title": "Springfield-Greene County African-American Heritage Trail officially launched at Park Day 2018",
+        "summary": "At the annual Park Day Reunion at Silver Springs Park in August 2018, during the park's 100th anniversary year, the trail's organizers unveiled an artist's rendering of the trail's first marker.",
+        "date": "2018-08-06",
+        "credit": "SGF CityView, City of Springfield"
+      }
+    ]
   },
   {
     "id": "cemetery",
     "name": "Lincoln Memorial Cemetery",
-    "where": "North Springfield",
+    "where": "Chestnut Expressway and Barnes Avenue",
     "meta": "Funded in part by the Community Foundation of the Ozarks",
-    "lat": 37.2370,
-    "lng": -93.2735,
+    "lat": 37.2112,
+    "lng": -93.2519,
     "teaser": "Resting place of generations of Black Springfield.",
-    "story": "Lincoln Memorial Cemetery is the resting place of generations of Springfield's Black community, the families who built its churches, schools and businesses. Its marker ends the walk where many of the trail's stories end, among the people who lived them."
+    "story": "Lincoln Memorial Cemetery is the resting place of generations of Springfield's Black community, the families who built its churches, schools and businesses. Many of the people whose stories are told along the trail rest here.\n\nLocated at Chestnut Expressway and Barnes Avenue since 1919, the cemetery contains about 1,200 graves, with gravestones dating back to the 1850s. To mark its 100th anniversary, its volunteer board of directors held a rededication ceremony, with new fencing around the cemetery and a new monument."
   },
   {
     "id": "bartley",

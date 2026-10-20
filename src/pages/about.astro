@@ -7,12 +7,19 @@ import { TRAIL_NAME } from "../lib/trail";
 import { PHOTOGRAPHER } from "../lib/photos";
 import InTheNews from "../components/InTheNews.astro";
 import { allPress } from "../lib/press";
+import partners from "../data/partners.json";
 ---
 <Base title={`About the Trail · ${TRAIL_NAME}`} description="The people and partners behind the Springfield-Greene County African American Heritage Trail.">
   <article class="about">
     <a class="back" href="/">← The walk</a>
     <h1>About the Trail</h1>
-    <p class="lede">The trail is led by the Springfield-Greene County African American Heritage Trail Committee with partners including the City of Springfield, Missouri State University, Ozark Greenways, the Springfield-Greene County Park Board and the Community Foundation of the Ozarks, which accepts donations for new markers.</p>
+    <p class="lede">The trail is led by the Springfield-Greene County African American Heritage Trail Committee, working with partners across the city and county.</p>
+
+    <section class="mission" aria-labelledby="mission-h">
+      <h2 id="mission-h">Our mission</h2>
+      <p>The mission of the trail is to continue to research and publish previously undocumented history and to involve the Springfield community in the identification and celebration of the contributions made by people of color to the community.</p>
+      <p class="mission-award">The Heritage Trail planning committee was honored for its efforts with the 2018 NAACP Drum Major Award.</p>
+    </section>
 
     <section class="roll" aria-labelledby="board-h">
       <p class="roll-kicker" aria-hidden="true">With gratitude</p>
@@ -25,6 +32,16 @@ import { allPress } from "../lib/press";
           </li>
         ))}
       </ol>
+    </section>
+
+    <section class="partners" aria-labelledby="partners-h">
+      <h2 id="partners-h">Partners and supporters</h2>
+      <ul class="partner-list">
+        {partners.map((p) => (
+          <li><a href={p.url} target="_blank" rel="noopener">{p.name}<span class="sr"> (opens in a new tab)</span></a></li>
+        ))}
+      </ul>
+      <p class="section-intro">The Community Foundation of the Ozarks holds the trail's fund and accepts donations for new markers.</p>
     </section>
 
     <InTheNews items={allPress()} />

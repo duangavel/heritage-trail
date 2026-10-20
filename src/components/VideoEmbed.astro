@@ -1,0 +1,28 @@
+---
+/*
+ * A tap-to-play video. Until the visitor taps, this is a plain link to the video's page and
+ * nothing is requested from the video host; src/scripts/oral.ts then swaps in the
+ * privacy-friendly player (youtube-nocookie.com, or Vimeo with Do Not Track).
+ */
+import { PROVIDERS, type VideoProvider } from "../lib/video";
+
+interface Props {
+  provider: VideoProvider;
+  id: string;
+  /** Used for the player's accessible name, e.g. "Richard's Story, Richard Lewis". */
+  label: string;
+}
+const { provider, id, label } = Astro.props;
+const p = PROVIDERS[provider];
+---
+<div class="oral-video" data-video={p.embedUrl(id)} data-video-title={label}>
+  <a class="oral-video-start" href={p.watchUrl(id)} target="_blank" rel="noopener" data-video-start>
+    <span class="oral-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+    <span class="oral-video-label">Play video<span class="sr">: {label}.</span></span>
+    <span class="oral-video-note">Loads from {p.name} when you tap play</span>
+  </a>
+</div>
+
+<script>
+  import "../scripts/oral.ts";
+</script>
