@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/", "has": [{ "type": "query", "key": "p", "value": "117" }], "destination": "/about/", "permanent": true },
+    { "source": "/", "has": [{ "type": "query", "key": "p", "value": "444" }], "destination": "/stops/square/", "permanent": true },
+    { "source": "/", "has": [{ "type": "query", "key": "p" }], "destination": "/", "permanent": true },
+
+    { "source": "/sites/missouri-state{/}?", "destination": "/stops/walls/", "permanent": true },
+    { "source": "/sites/church-square-north{/}?", "destination": "/stops/churchnorth/", "permanent": true },
+    { "source": "/sites/church-square{/}?", "destination": "/stops/churchsouth/", "permanent": true },
+    { "source": "/sites/lincoln-school{/}?", "destination": "/stops/lincoln/", "permanent": true },
+    { "source": "/sites/lincoln-cemetery{/}?", "destination": "/stops/cemetery/", "permanent": true },
+    { "source": "/sites/albertas-hotel{/}?", "destination": "/stops/alberta/", "permanent": true },
+    { "source": "/sites/grahams{/}?", "destination": "/stops/grahams/", "permanent": true },
+    { "source": "/sites/park-central/:rest*", "destination": "/stops/square/", "permanent": true },
+    { "source": "/sites/park-central{/}?", "destination": "/stops/square/", "permanent": true },
+    { "source": "/sites/silver-springs{/}?", "destination": "/stops/silver/", "permanent": true },
+    { "source": "/sites/:rest*", "destination": "/", "permanent": true },
+
+    { "source": "/community-remembrance-coalition-soil-collection-ceremony{/}?", "destination": "/stops/square/", "permanent": true },
+    { "source": "/news{/}?", "destination": "/about/", "permanent": true },
+    { "source": "/research{/}?", "destination": "/about/", "permanent": true },
+    { "source": "/journey-continues{/}?", "destination": "/", "permanent": true },
+    { "source": "/diverse-perspectives{/}?", "destination": "/", "permanent": true },
+    { "source": "/2021-mlk-march{/}?", "destination": "/", "permanent": true },
+    { "source": "/blog/:rest*", "destination": "/", "permanent": true },
+    { "source": "/category/:rest*", "destination": "/", "permanent": true },
+    { "source": "/author/:rest*", "destination": "/", "permanent": true },
+    { "source": "/type/:rest*", "destination": "/", "permanent": true },
+    { "source": "/feed/:rest*", "destination": "/", "permanent": true },
+    { "source": "/:year(\\d{4})/:rest*", "destination": "/", "permanent": true }
+  ]
+}

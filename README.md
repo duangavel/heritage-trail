@@ -34,14 +34,18 @@ Stops are numbered in the order they appear in the file. Adding or removing an e
 
 ## QR codes
 
-Each marker's QR code should link to its stop page, for example `https://<site>/stops/kentwood`.
+Each marker's QR code should link to its stop page on the trail's domain, for example `https://africanamericanheritagetrailsgf.org/stops/kentwood/`.
+The domain is set as `site` in [`astro.config.mjs`](astro.config.mjs); every page's canonical link and share preview use it.
 Opening a stop page from a QR code (or any link from outside the site) welcomes the visitor and stamps their trail passport.
 Older links in the form `/?stop=kentwood` still work and redirect to the stop page.
 
 ## Launch day
 
-Until launch the site asks search engines not to list it (a `noindex` tag on every page and a `robots.txt` that blocks crawling).
-To open it up, set `HIDE_FROM_SEARCH_ENGINES = false` in [`src/config.ts`](src/config.ts), then commit and push.
+1. **Search engines.** Until launch the site asks search engines not to list it (a `noindex` tag on every page and a `robots.txt` that blocks crawling). To open it up, set `HIDE_FROM_SEARCH_ENGINES = false` in [`src/config.ts`](src/config.ts).
+2. **Redirects from the old site.** [`vercel.launch.json`](vercel.launch.json) sends every address from the old WordPress site (such as `/sites/grahams/`) to its new page. Vercel ignores it under that name. To turn the redirects on, rename it to `vercel.json`.
+3. **Domain.** In Vercel, add `africanamericanheritagetrailsgf.org` (and `www.`, redirecting to it) to the project, then point the domain's DNS at Vercel.
+
+Commit and push after steps 1 and 2.
 
 ## Running it
 
