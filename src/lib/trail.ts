@@ -61,6 +61,8 @@ export interface Stop {
   teaser: string;
   /** Paragraphs are separated by a blank line ("\n\n"). */
   story: string;
+  /** A short credit line shown under the story, e.g. who funded the marker. */
+  acknowledgment?: string;
   /** Extra sections shown after the story, e.g. the back of the marker. */
   sections?: StopSection[];
   /** Videos about this stop (ceremonies, dedications); shown only when there is at least one. */

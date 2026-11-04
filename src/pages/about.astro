@@ -38,7 +38,7 @@ import partners from "../data/partners.json";
       <h2 id="partners-h">Partners and supporters</h2>
       <ul class="partner-list">
         {partners.map((p) => (
-          <li><a href={p.url} target="_blank" rel="noopener">{p.name}<span class="sr"> (opens in a new tab)</span></a></li>
+          <li>{"url" in p && p.url ? <a href={p.url} target="_blank" rel="noopener">{p.name}<span class="sr"> (opens in a new tab)</span></a> : <span class="partner-name">{p.name}</span>}</li>
         ))}
       </ul>
       <p class="section-intro">The Community Foundation of the Ozarks holds the trail's fund and accepts donations for new markers.</p>

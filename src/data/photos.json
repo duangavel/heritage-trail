@@ -12,8 +12,8 @@
         {
           "id": "walls-dedication",
           "title": "Dedication day",
-          "date": null,
-          "timeline": false,
+          "date": "2024-08-21",
+          "timeline": true,
           "photos": [
             {
               "file": "walls/dedication-01.jpg",

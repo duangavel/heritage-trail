@@ -25,7 +25,7 @@ const photo = photosFor("kentwood").events[0]?.photos[0];
     <h3>Places waiting to be marked</h3>
     <ul class="support-places">
       {nextMarkers.map((m) => (
-        <li><strong>{m.name}</strong><span>{m.description}</span></li>
+        <li><strong>{m.name}</strong>{"description" in m && m.description && <span>{m.description}</span>}</li>
       ))}
     </ul>
 

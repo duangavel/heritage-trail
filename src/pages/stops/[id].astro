@@ -35,6 +35,7 @@ const galleries = events.filter((e) => e.photos.length);
     {s.comingSoon
       ? <p class="sheet-story coming-soon">This marker's story is coming soon.</p>
       : <div class="sheet-story">{storyParagraphs(s).map((p) => <p>{p}</p>)}</div>}
+    {s.acknowledgment && <p class="stop-ack">{s.acknowledgment}</p>}
 
     <PhotoTool id="camInput">
       {directions && <a class="btn btn-ghost" href={directions} target="_blank" rel="noopener">Get directions</a>}

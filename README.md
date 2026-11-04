@@ -27,12 +27,13 @@ Stops are numbered in the order they appear in the file. Adding or removing an e
   - a YouTube or Vimeo video: `{ "type": "video", "youtubeId": "vv-3WNgwdMc" (or "vimeoId": "460197558"), "title": "...", "speaker": "...", "summary": "...", "credit": "...", "pageUrl": "..." }`. A short summary is required (YouTube provides captions). Nothing loads from YouTube or Vimeo until the visitor taps play; then it uses youtube-nocookie.com or Vimeo with Do Not Track.
   - an audio file in `public/audio/`: `{ "type": "audio", "src": "/audio/kentwood.mp3", "title": "...", "speaker": "...", "transcript": "...", "credit": "..." }`. A full transcript is required.
 - **Stop videos and marker sections**: a stop can also have `videos` (`{ "provider": "vimeo", "id": "460197558", "title": "...", "summary": "...", "date": "2020-09-21", "credit": "..." }`, provider `"youtube"` or `"vimeo"`) and `sections` (`{ "title": "...", "kicker": "...", "text": "..." }`), e.g. the back of a marker.
-- **Partners** (About page): [`src/data/partners.json`](src/data/partners.json).
+- **Partners** (About page): [`src/data/partners.json`](src/data/partners.json). `url` is optional; leave it out to list a name without a link.
+- **Marker credit line**: a stop can have `acknowledgment`, a short line shown under its story (e.g. who made the lead gift for the marker).
 - **Voices of the trail** (home page): [`src/data/voices.json`](src/data/voices.json), a list of oral histories in the same format, for interviews about the whole trail rather than one stop. The section stays hidden while the list is empty.
 - **In the news**: [`src/data/press.json`](src/data/press.json). Each item has `outlet`, `headline`, `date` (YYYY-MM-DD, or null with a `dateLabel`), `url` and `stops` (stop ids and/or `"trail"`). Optional: `links` (several labeled links for one story, e.g. an article and its video) and `stopLinks` (for a series, the page about each stop, shown on that stop instead of the main link). The About page lists every item newest first; each stop page lists the items tagged with that stop. Both lists hide when empty.
 - **Advisory Board**: [`src/data/board.json`](src/data/board.json).
 - **Donate link**: `DONATE_URL` in [`src/config.ts`](src/config.ts).
-- **Places still to be marked** (shown in the donation panel): [`src/data/next-markers.json`](src/data/next-markers.json).
+- **Places still to be marked** (shown in the donation panel): [`src/data/next-markers.json`](src/data/next-markers.json). `description` is optional.
 
 ## QR codes
 

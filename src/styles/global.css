@@ -343,3 +343,7 @@ footer .credit a{font:inherit; font-family:var(--body); font-size:.9rem; font-we
 @media (min-width:600px){ .partner-list{grid-template-columns:1fr 1fr} }
 .partner-list li{padding:.55rem 0; border-bottom:1px solid var(--line)}
 .partner-list a{font:600 1.02rem/1.4 var(--display); text-underline-offset:3px}
+
+/* marker credit line and unlinked partners */
+.stop-ack{margin:-1rem 0 2rem; padding-left:.9rem; border-left:4px solid var(--brass); font-size:.98rem; color:var(--muted); max-width:36em}
+.partner-name{font:600 1.02rem/1.4 var(--display)}
